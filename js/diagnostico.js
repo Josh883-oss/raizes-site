@@ -1550,7 +1550,78 @@
       });
     }
 
-    // Enviar no WhatsApp
+    // Disparo automático por E-mail para contato@raizes.agr.br (com Dossiê + JSON importável no SaaS)
+    function dispatchEmailToRaizes(state, t, showStatus) {
+      var f = state.fields || {};
+      var nomeCaso = f.fam_nome_referencia || f.tit1_nome || 'Família Não Identificada';
+      var resumoTexto = buildPlainTextSummary(state, t);
+      var payload = {
+        _subject: 'Diagnóstico Patrimonial e Familiar — ' + nomeCaso,
+        _template: 'table',
+        _captcha: 'false',
+        familia_caso: nomeCaso,
+        titular_principal: f.tit1_nome || '—',
+        whatsapp: f.fam_whatsapp || '—',
+        email: f.fam_email || '—',
+        cidade_uf: (f.fam_cidade_residencia || f.fam_cidade_origem || '—') + ' / ' + (f.fam_uf_principal || 'MG'),
+        patrimonio_mercado: formatBRL(t.totalMerc),
+        patrimonio_irpf: formatBRL(t.totalDirpf),
+        passivos_dividas: formatBRL(t.totalPassivos),
+        patrimonio_liquido: formatBRL(t.patrimonioLiquidoMerc),
+        nota_legado: (f.legado_nota !== '' && f.legado_nota !== undefined ? f.legado_nota + '/10' : '—'),
+        resumo_dossie: resumoTexto,
+        json_importacao_saas: JSON.stringify(state)
+      };
+
+      if (showStatus) {
+        showFeedback('Enviando diagnóstico completo e arquivo de importação para contato@raizes.agr.br...', false);
+      }
+
+      return fetch('https://formsubmit.co/ajax/contato@raizes.agr.br', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (resp) {
+          if (!resp.ok) throw new Error('HTTP ' + resp.status);
+          return resp.json();
+        })
+        .then(function () {
+          if (showStatus) {
+            showFeedback('Diagnóstico completo enviado com sucesso para o e-mail da Raízes (contato@raizes.agr.br)!', false);
+          }
+          return true;
+        })
+        .catch(function () {
+          if (showStatus) {
+            var subject = encodeURIComponent('Diagnóstico Patrimonial e Familiar — ' + nomeCaso);
+            var body = encodeURIComponent(resumoTexto + '\n\n--- JSON PARA SISTEMA RAÍZES ---\n' + JSON.stringify(state));
+            window.location.href = 'mailto:contato@raizes.agr.br?subject=' + subject + '&body=' + body;
+            showFeedback('Abrindo seu aplicativo de e-mail com o diagnóstico completo preenchido para contato@raizes.agr.br.', false);
+          }
+          return false;
+        });
+    }
+
+    // Enviar somente por E-mail
+    var btnEmail = document.getElementById('btn-send-email');
+    if (btnEmail) {
+      btnEmail.addEventListener('click', function () {
+        var consent = document.getElementById('diag_lgpd_consent');
+        if (consent && !consent.checked) {
+          showFeedback('Por favor, marque a caixa de autorização LGPD antes de enviar o diagnóstico.', true);
+          return;
+        }
+        var state = collectAllData();
+        var t = computeTotals(state);
+        dispatchEmailToRaizes(state, t, true);
+      });
+    }
+
+    // Enviar no WhatsApp + Disparo automático por E-mail em segundo plano
     function sendToWhatsApp() {
       var consent = document.getElementById('diag_lgpd_consent');
       if (consent && !consent.checked) {
@@ -1559,10 +1630,12 @@
       }
       var state = collectAllData();
       var t = computeTotals(state);
+      // Dispara cópia completa com JSON para o e-mail da Raízes em segundo plano
+      dispatchEmailToRaizes(state, t, false);
       var txt = buildPlainTextSummary(state, t);
       var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(txt);
       window.open(url, '_blank', 'noopener');
-      showFeedback('Abrindo o WhatsApp com o resumo estruturado do seu diagnóstico...', false);
+      showFeedback('Diagnóstico encaminhado para contato@raizes.agr.br e abrindo conversa no WhatsApp da Raízes...', false);
     }
 
     var btnWa1 = document.getElementById('btn-send-whatsapp');
