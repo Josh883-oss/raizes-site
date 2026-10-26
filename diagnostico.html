@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#182E14">
+  <meta property="og:locale" content="pt_BR">
+  <title>Diagnóstico Patrimonial e Familiar Completo | Raízes Proteção Patrimonial Rural</title>
+  <meta name="description" content="Ficha completa de levantamento patrimonial, sucessório, societário, passivos e governança familiar para estudo de viabilidade de holding rural e planejamento sucessório.">
+  <link rel="canonical" href="https://raizes.agr.br/diagnostico.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diagnóstico Patrimonial e Familiar Completo — Raízes">
+  <meta property="og:description" content="Levantamento estruturado de família, imóveis rurais e urbanos, maquinários, rebanho, passivos, tributação e governança para estudo de viabilidade patrimonial.">
+  <meta property="og:image" content="assets/fotos/hero-fazenda-mg.webp">
+  <meta property="og:url" content="https://raizes.agr.br/diagnostico.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="stylesheet" href="css/raizes.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o diagnóstico</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Raízes Proteção Patrimonial Rural">
+        <picture>
+          <source srcset="assets/simbolo-real-sm.webp" type="image/webp">
+          <img src="assets/simbolo-real-sm.png" alt="Símbolo Árvore Raízes" width="103" height="120">
+        </picture>
+        <span>RAÍZES<small>PROTEÇÃO PATRIMONIAL RURAL</small></span>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links" id="menu-links">
+          <li><a href="index.html#solucoes">Soluções</a></li>
+          <li><a href="index.html#riscos">O Que Está em Jogo</a></li>
+          <li><a href="index.html#simulador">Simulador</a></li>
+          <li><a href="diagnostico.html" aria-current="page" style="color: var(--verde-800); font-weight: 700;">Diagnóstico Completo</a></li>
+          <li><a href="index.html#metodologia">Como Funciona</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-wa" href="https://wa.me/5532920004387?text=Ol%C3%A1!%20Estou%20preenchendo%20o%20Diagn%C3%B3stico%20Patrimonial%20e%20Familiar%20no%20site%20da%20Ra%C3%ADzes%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+          Suporte no WhatsApp
+        </a>
+        <button class="menu-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="menu-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ==================== HERO DO DIAGNÓSTICO ==================== -->
+    <section class="diag-hero">
+      <div class="container">
+        <div class="eyebrow eyebrow-light">Estudo de Viabilidade Patrimonial e Familiar (EVPF)</div>
+        <h1>Diagnóstico Patrimonial, Familiar e Sucessório</h1>
+        <p class="lead">
+          Preencha os aspectos familiares, imóveis rurais e urbanos, maquinários, rebanho, passivos e governança para iniciarmos o estudo de viabilidade do seu caso. Seus dados ficam salvos automaticamente no seu próprio navegador e você pode gerar o dossiê em PDF ou encaminhar diretamente à nossa equipe.
+        </p>
+
+        <div class="diag-toolbar">
+          <div class="diag-save-badge" id="autosave-status" aria-live="polite">
+            <span class="diag-save-dot"></span>
+            <span>Salvamento automático ativo neste dispositivo (100% privado)</span>
+          </div>
+
+          <div class="diag-toolbar-actions">
+            <button type="button" class="btn-ghost-light" id="btn-load-example" title="Preencher com caso fictício de exemplo para visualizar o dossiê">
+              Preencher Exemplo Demonstrativo
+            </button>
+            <label class="btn-ghost-light" for="input-import-json" style="margin:0;">
+              Importar Arquivo (.json)
+              <input type="file" id="input-import-json" accept=".json,application/json" style="display:none;">
+            </label>
+            <button type="button" class="btn-ghost-light" id="btn-export-json-top">
+              Salvar Backup (.json)
+            </button>
+            <button type="button" class="btn-ghost-light" id="btn-print-top">
+              Imprimir / Salvar PDF
+            </button>
+            <button type="button" class="btn-ghost-light" id="btn-clear-all" style="border-color: rgba(255,180,180,.4); color: #FFD6D6;">
+              Limpar Ficha
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BARRA DE INDICADORES AO VIVO ==================== -->
+    <div class="diag-kpi-bar" aria-label="Resumo em tempo real do levantamento">
+      <div class="container">
+        <div class="diag-kpi-grid">
+          <div class="diag-kpi-item">
+            <small>Família / Herdeiros</small>
+            <strong id="kpi-familia">Não informado</strong>
+          </div>
+          <div class="diag-kpi-item">
+            <small>Imóveis Cadastrados</small>
+            <strong id="kpi-imoveis">0 imóveis (0 ha)</strong>
+          </div>
+          <div class="diag-kpi-item">
+            <small>Patrimônio (Mercado)</small>
+            <strong id="kpi-mercado">R$ 0</strong>
+          </div>
+          <div class="diag-kpi-item">
+            <small>Declarado no IRPF</small>
+            <strong id="kpi-dirpf">R$ 0</strong>
+          </div>
+          <div class="diag-kpi-item">
+            <small>Passivos / Dívidas</small>
+            <strong id="kpi-passivos">R$ 0</strong>
+          </div>
+          <div class="diag-kpi-item">
+            <small>Nota do Legado</small>
+            <strong id="kpi-legado">— / 10</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CORPO DO DIAGNÓSTICO ==================== -->
+    <section style="padding: 44px 0 88px;">
+      <div class="container">
+
+        <!-- Navegação das 6 Etapas -->
+        <nav class="diag-steps-nav" aria-label="Etapas do Diagnóstico Patrimonial">
+          <button type="button" class="diag-step-btn active" data-step-target="1">
+            <span class="diag-step-num">Etapa 1 de 6</span>
+            <span class="diag-step-title">1. Família &amp; Sucessão</span>
+          </button>
+          <button type="button" class="diag-step-btn" data-step-target="2">
+            <span class="diag-step-num">Etapa 2 de 6</span>
+            <span class="diag-step-title">2. Imóveis Rurais e Urbanos</span>
+          </button>
+          <button type="button" class="diag-step-btn" data-step-target="3">
+            <span class="diag-step-num">Etapa 3 de 6</span>
+            <span class="diag-step-title">3. Empresas, Máquinas e Rebanho</span>
+          </button>
+          <button type="button" class="diag-step-btn" data-step-target="4">
+            <span class="diag-step-num">Etapa 4 de 6</span>
+            <span class="diag-step-title">4. Crédito Rural e Passivos</span>
+          </button>
+          <button type="button" class="diag-step-btn" data-step-target="5">
+            <span class="diag-step-num">Etapa 5 de 6</span>
+            <span class="diag-step-title">5. Gestão, Legado e Documentos</span>
+          </button>
+          <button type="button" class="diag-step-btn" data-step-target="6">
+            <span class="diag-step-num">Etapa 6 de 6</span>
+            <span class="diag-step-title">6. Dossiê &amp; Envio</span>
+          </button>
+        </nav>
+
+        <form id="diag-form" novalidate>
+
+          <!-- ========================================================
+               ETAPA 1: FAMÍLIA, GENOGRAMA E HISTÓRIA DO LEGADO
+               ======================================================== -->
+          <div class="diag-panel active" id="step-1" data-step="1">
+
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>1.1 Identificação da Família e História do Legado</h2>
+                  <p>Informações iniciais do núcleo familiar, contato de retorno e contexto histórico da construção do patrimônio.</p>
+                </div>
+                <span class="badge">Mód. 01 &amp; 02 — Script Rural</span>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field">
+                  <label for="fam_nome_referencia">Nome da Família / Caso de Referência <span class="req">*</span></label>
+                  <input type="text" id="fam_nome_referencia" name="fam_nome_referencia" placeholder="Ex.: Família Oliveira — Fazenda Santa Inês" required>
+                </div>
+                <div class="field">
+                  <label for="fam_whatsapp">WhatsApp Principal para Retorno <span class="req">*</span></label>
+                  <input type="tel" id="fam_whatsapp" name="fam_whatsapp" placeholder="(32) 99999-9999" required>
+                </div>
+                <div class="field">
+                  <label for="fam_email">E-mail de Contato</label>
+                  <input type="email" id="fam_email" name="fam_email" placeholder="seuemail@dominio.com.br">
+                </div>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field">
+                  <label for="fam_cidade_origem">Cidade / Região de Origem da Família</label>
+                  <input type="text" id="fam_cidade_origem" name="fam_cidade_origem" placeholder="Ex.: Manhuaçu / Zona da Mata - MG">
+                </div>
+                <div class="field">
+                  <label for="fam_cidade_residencia">Cidade / UF de Residência Atual dos Titulares</label>
+                  <input type="text" id="fam_cidade_residencia" name="fam_cidade_residencia" placeholder="Ex.: Juiz de Fora / MG">
+                </div>
+                <div class="field">
+                  <label for="fam_uf_principal">UF Principal das Propriedades Rurais</label>
+                  <select id="fam_uf_principal" name="fam_uf_principal">
+                    <option value="MG" selected>Minas Gerais (MG)</option>
+                    <option value="SP">São Paulo (SP)</option>
+                    <option value="GO">Goiás (GO)</option>
+                    <option value="MT">Mato Grosso (MT)</option>
+                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                    <option value="BA">Bahia (BA)</option>
+                    <option value="PR">Paraná (PR)</option>
+                    <option value="RS">Rio Grande do Sul (RS)</option>
+                    <option value="ES">Espírito Santo (ES)</option>
+                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                    <option value="TO">Tocantins (TO)</option>
+                    <option value="PA">Pará (PA)</option>
+                    <option value="MA">Maranhão (MA)</option>
+                    <option value="OUTRA">Outra UF / Múltiplos Estados</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="fam_historia_legado">Breve História da Família, Origem das Terras e Principais Preocupações Atuais</label>
+                <textarea id="fam_historia_legado" name="fam_historia_legado" rows="3" placeholder="Conte brevemente como o patrimônio foi construído (ex.: herdado dos avós, adquirido ao longo de 30 anos na cafeicultura/pecuária) e o que motivou a busca pelo planejamento agora. (Aviso LGPD: evite inserir diagnósticos médicos detalhados ou dados sensíveis desnecessários)."></textarea>
+              </div>
+            </div>
+
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>1.2 Titulares do Patrimônio (Patriarca / Matriarca / Sócios Fundadores)</h2>
+                  <p>Qualificação civil e regime de bens dos titulares atuais do patrimônio (Planilha OURO — Aba 1).</p>
+                </div>
+              </div>
+
+              <h3 class="diag-subhead">Titular 1 (Patriarca / Produtor(a) Rural Principal)</h3>
+              <div class="field-grid-4">
+                <div class="field">
+                  <label for="tit1_nome">Nome Completo <span class="req">*</span></label>
+                  <input type="text" id="tit1_nome" name="tit1_nome" placeholder="Nome completo do titular 1">
+                </div>
+                <div class="field">
+                  <label for="tit1_nascimento">Data de Nascimento / Idade</label>
+                  <input type="text" id="tit1_nascimento" name="tit1_nascimento" placeholder="DD/MM/AAAA ou idade">
+                </div>
+                <div class="field">
+                  <label for="tit1_cpf">CPF (opcional nesta fase)</label>
+                  <input type="text" id="tit1_cpf" name="tit1_cpf" placeholder="000.000.000-00">
+                </div>
+                <div class="field">
+                  <label for="tit1_profissao">Profissão / Atividade Principal</label>
+                  <input type="text" id="tit1_profissao" name="tit1_profissao" placeholder="Ex.: Produtor Rural / Cafeicultor">
+                </div>
+              </div>
+
+              <div class="field-grid-4">
+                <div class="field">
+                  <label for="tit1_estado_civil">Estado Civil</label>
+                  <select id="tit1_estado_civil" name="tit1_estado_civil">
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="União Estável">União Estável</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="tit1_regime_bens">Regime de Bens do Casamento / União</label>
+                  <select id="tit1_regime_bens" name="tit1_regime_bens">
+                    <option value="Comunhão Parcial de Bens">Comunhão Parcial de Bens</option>
+                    <option value="Comunhão Universal de Bens">Comunhão Universal de Bens</option>
+                    <option value="Separação Convencional (Total) de Bens">Separação Convencional (Total) de Bens</option>
+                    <option value="Separação Obrigatória (Legal) de Bens">Separação Obrigatória (Legal) de Bens</option>
+                    <option value="Participação Final nos Aquestos">Participação Final nos Aquestos</option>
+                    <option value="Não aplicável">Não aplicável</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="tit1_data_casamento">Ano / Data do Casamento ou União</label>
+                  <input type="text" id="tit1_data_casamento" name="tit1_data_casamento" placeholder="Ex.: 1988 (antes/depois das aquisições)">
+                </div>
+                <div class="field">
+                  <label for="tit1_pacto_antenupcial">Possui Pacto Antenupcial ou Contrato de União Estável?</label>
+                  <select id="tit1_pacto_antenupcial" name="tit1_pacto_antenupcial">
+                    <option value="Não">Não</option>
+                    <option value="Sim, registrado em cartório">Sim, registrado em cartório</option>
+                    <option value="Sim, apenas instrumento particular">Sim, apenas instrumento particular</option>
+                    <option value="Não sei informar">Não sei informar</option>
+                  </select>
+                </div>
+              </div>
+
+              <h3 class="diag-subhead">Titular 2 / Cônjuge / Companheiro(a) (Matriarca / Co-titular)</h3>
+              <div class="field-grid-4">
+                <div class="field">
+                  <label for="tit2_nome">Nome Completo do Cônjuge / Co-titular</label>
+                  <input type="text" id="tit2_nome" name="tit2_nome" placeholder="Deixe em branco se não houver">
+                </div>
+                <div class="field">
+                  <label for="tit2_nascimento">Data de Nascimento / Idade</label>
+                  <input type="text" id="tit2_nascimento" name="tit2_nascimento" placeholder="DD/MM/AAAA ou idade">
+                </div>
+                <div class="field">
+                  <label for="tit2_cpf">CPF (opcional nesta fase)</label>
+                  <input type="text" id="tit2_cpf" name="tit2_cpf" placeholder="000.000.000-00">
+                </div>
+                <div class="field">
+                  <label for="tit2_atuacao">Participação na Atividade Rural</label>
+                  <select id="tit2_atuacao" name="tit2_atuacao">
+                    <option value="Co-titular / atua na gestão">Co-titular / atua na gestão</option>
+                    <option value="Meeiro(a) sem atuação operacional direta">Meeiro(a) sem atuação operacional direta</option>
+                    <option value="Possui atividade / renda própria fora do agro">Possui atividade / renda própria fora do agro</option>
+                    <option value="Falecido(a) — inventário já concluído">Falecido(a) — inventário já concluído</option>
+                    <option value="Falecido(a) — inventário pendente/em andamento">Falecido(a) — inventário pendente/em andamento</option>
+                    <option value="Não aplicável">Não aplicável</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>1.3 Filhos, Herdeiros, Genros/Noras e Netos (Genograma Familiar)</h2>
+                  <p>Adicione cada filho ou herdeiro. Indique estado civil, regime de bens, se trabalha no negócio e se já recebeu algum adiantamento de legítima/doação.</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-herdeiro">+ Adicionar Filho / Familiar</button>
+              </div>
+
+              <div class="repeater-list" id="lista-herdeiros"></div>
+
+              <h3 class="diag-subhead">Questões Sucessórias Importantes da Família (Script Rural 1.1)</h3>
+              <div class="field-grid-3">
+                <div class="field">
+                  <label for="suc_filhos_fora_casamento">Há filhos de casamentos ou relacionamentos anteriores?</label>
+                  <select id="suc_filhos_fora_casamento" name="suc_filhos_fora_casamento">
+                    <option value="Não (todos os filhos são comuns ao casal)">Não (todos os filhos são comuns ao casal)</option>
+                    <option value="Sim (há filhos exclusivos de um dos cônjuges)">Sim (há filhos exclusivos de um dos cônjuges)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="suc_adiantamento_legitima">Já houve doação de bens ou adiantamento de herança a algum filho?</label>
+                  <select id="suc_adiantamento_legitima" name="suc_adiantamento_legitima">
+                    <option value="Não">Não</option>
+                    <option value="Sim, formalizado em escritura">Sim, formalizado em escritura</option>
+                    <option value="Sim, informalmente (ajuda financeira/compra de bem)">Sim, informalmente (ajuda financeira/compra de bem)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="suc_instrumentos_existentes">Já existe algum instrumento sucessório assinado?</label>
+                  <select id="suc_instrumentos_existentes" name="suc_instrumentos_existentes">
+                    <option value="Nenhum">Nenhum</option>
+                    <option value="Doação com reserva de usufruto">Doação com reserva de usufruto</option>
+                    <option value="Testamento público ou particular">Testamento público ou particular</option>
+                    <option value="Holding já constituída (precisa revisão)">Holding já constituída (precisa revisão)</option>
+                    <option value="Seguro de vida / Previdência VGBL para liquidez">Seguro de vida / Previdência VGBL para liquidez</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="suc_herdeiro_vulneravel">Há algum familiar que exige proteção especial no planejamento (menor, idoso, curatela ou restrição de crédito)?</label>
+                  <input type="text" id="suc_herdeiro_vulneravel" name="suc_herdeiro_vulneravel" placeholder="Se houver, indique apenas o vínculo e a necessidade jurídica/patrimonial (sem dados médicos).">
+                </div>
+                <div class="field">
+                  <label for="suc_conflitos_observacoes">Expectativas dos pais sobre a entrada de genros/noras e proteção das quotas</label>
+                  <input type="text" id="suc_conflitos_observacoes" name="suc_conflitos_observacoes" placeholder="Ex.: Desejamos cláusula de incomunicabilidade para proteger o patrimônio em caso de divórcio dos filhos.">
+                </div>
+              </div>
+
+              <div class="diag-step-footer">
+                <span></span>
+                <button type="button" class="btn btn-primary" data-goto-step="2">Avançar para Etapa 2: Imóveis Rurais e Urbanos →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================================
+               ETAPA 2: IMÓVEIS RURAIS E URBANOS (PLANILHA OURO ABA 3)
+               ======================================================== -->
+          <div class="diag-panel" id="step-2" data-step="2">
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>2. Levantamento de Bens Imóveis (Rurais e Urbanos)</h2>
+                  <p>Cadastre cada fazenda, gleba/matrícula ou imóvel urbano. A comparação entre o <strong>Valor de Mercado</strong>, o <strong>Valor Declarado no IRPF</strong> e o <strong>VTN/ITR</strong> é a base do Estudo de Viabilidade Patrimonial (Planilha OURO — Aba 3).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-imovel">+ Adicionar Imóvel Rural ou Urbano</button>
+              </div>
+
+              <div class="repeater-list" id="lista-imoveis"></div>
+
+              <div style="margin-top: 12px;">
+                <button type="button" class="btn-add-item" id="btn-add-imovel-bottom">+ Adicionar Outro Imóvel</button>
+              </div>
+
+              <h3 class="diag-subhead">Observações Gerais sobre o Patrimônio Imobiliário</h3>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="imov_obs_regularizacao">Existem áreas de posse, escrituras não registradas, inventários antigos em aberto ou retificações de área pendentes?</label>
+                  <textarea id="imov_obs_regularizacao" name="imov_obs_regularizacao" rows="2" placeholder="Descreva se alguma matrícula possui pendência de registro, reserva legal/CAR ou desmembramento em andamento."></textarea>
+                </div>
+                <div class="field">
+                  <label for="imov_obs_contratos">Como funcionam hoje os contratos de exploração (arrendamento, parceria, comodato, condomínio)?</label>
+                  <textarea id="imov_obs_contratos" name="imov_obs_contratos" rows="2" placeholder="Ex.: Fazenda Boa Vista está arrendada por 5 anos em sacas de soja; Fazenda Cachoeira explorada diretamente na PF."></textarea>
+                </div>
+              </div>
+
+              <div class="diag-step-footer">
+                <button type="button" class="btn btn-light" data-goto-step="1">← Voltar para Família</button>
+                <button type="button" class="btn btn-primary" data-goto-step="3">Avançar para Etapa 3: Empresas, Máquinas e Rebanho →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================================
+               ETAPA 3: EMPRESAS, MAQUINÁRIOS, SEMOVENTES E FINANCEIRO
+               ======================================================== -->
+          <div class="diag-panel" id="step-3" data-step="3">
+
+            <!-- 3.1 Empresas e Quotas Societárias -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>3.1 Empresas e Participações Societárias Existentes</h2>
+                  <p>Informe se algum membro da família já possui CNPJ (agropecuária, holding, comércio, transportadora, cooperativa, etc.).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-empresa">+ Adicionar Empresa / CNPJ</button>
+              </div>
+              <div class="repeater-list" id="lista-empresas"></div>
+            </div>
+
+            <!-- 3.2 Maquinários, Tratores, Caminhões e Veículos -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>3.2 Maquinários Agrícolas, Implementos, Caminhões e Veículos (Bens Móveis)</h2>
+                  <p>Tratores, colheitadeiras, pulverizadores, secadores de café, pivôs, caminhões, utilitários e aeronaves (Planilha OURO — Aba 4).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-movel">+ Adicionar Maquinário / Veículo / Lote</button>
+              </div>
+              <div class="repeater-list" id="lista-moveis"></div>
+            </div>
+
+            <!-- 3.3 Bens Semoventes (Rebanho) -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>3.3 Rebanho / Bens Semoventes</h2>
+                  <p>Bovinos de corte, gado leiteiro, genética/matrizes, equinos ou outros rebanhos (Planilha OURO — Aba 4).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-semovente">+ Adicionar Rebanho / Semoventes</button>
+              </div>
+              <div class="repeater-list" id="lista-semoventes"></div>
+            </div>
+
+            <!-- 3.4 Ativos Financeiros, Safra Estocada e Créditos -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>3.4 Aplicações Financeiras, Safra em Estoque, Cooperativas e Previdência</h2>
+                  <p>Saldos em aplicações, cotas-partes em cooperativas, café/grãos armazenados, créditos a receber e previdência privada.</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-financeiro">+ Adicionar Ativo Financeiro / Estoque</button>
+              </div>
+              <div class="repeater-list" id="lista-financeiros"></div>
+
+              <div class="diag-step-footer">
+                <button type="button" class="btn btn-light" data-goto-step="2">← Voltar para Imóveis</button>
+                <button type="button" class="btn btn-primary" data-goto-step="4">Avançar para Etapa 4: Crédito Rural e Passivos →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================================
+               ETAPA 4: PASSIVOS, CRÉDITO RURAL E CONTINGÊNCIAS
+               ======================================================== -->
+          <div class="diag-panel" id="step-4" data-step="4">
+
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>4.1 Crédito Rural, Financiamentos Bancários, CPRs e Dívidas</h2>
+                  <p>Essencial para verificar garantias reais (hipoteca/alienação fiduciária) que exigem <strong>Termo de Anuência do Banco</strong> antes da integralização de imóveis na holding (Planilha OURO — Aba 5).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-divida">+ Adicionar Operação de Crédito / Dívida</button>
+              </div>
+              <div class="repeater-list" id="lista-dividas"></div>
+            </div>
+
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>4.2 Processos Administrativos, Judiciais e Contingências</h2>
+                  <p>Mapeamento preventivo para garantir que qualquer reorganização patrimonial seja 100% lícita, sem risco de caracterização de fraude contra credores ou à execução (Mód. 05 — Ativos e Passivos).</p>
+                </div>
+                <button type="button" class="btn-add-item" id="btn-add-processo">+ Adicionar Processo / Contingência</button>
+              </div>
+              <div class="repeater-list" id="lista-processos"></div>
+
+              <div class="field-grid" style="margin-top: 18px;">
+                <div class="field">
+                  <label for="pas_avais_terceiros">O produtor ou cônjuge assinou como avalista/fiador de terceiros, cooperativas ou empresas de outros sócios?</label>
+                  <select id="pas_avais_terceiros" name="pas_avais_terceiros">
+                    <option value="Não">Não</option>
+                    <option value="Sim, apenas de empresas da própria família">Sim, apenas de empresas da própria família</option>
+                    <option value="Sim, prestou aval/fiança para terceiros">Sim, prestou aval/fiança para terceiros</option>
+                    <option value="Não tenho certeza">Não tenho certeza</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="pas_observacoes">Observações adicionais sobre passivos, parcelamentos fiscais (FUNRURAL/ITR/IRPF) ou garantias</label>
+                  <input type="text" id="pas_observacoes" name="pas_observacoes" placeholder="Ex.: Parcelamento ativo na Receita Federal em dia; cédula rural pignoratícia quitada aguardando baixa.">
+                </div>
+              </div>
+
+              <div class="diag-step-footer">
+                <button type="button" class="btn btn-light" data-goto-step="3">← Voltar para Ativos e Rebanho</button>
+                <button type="button" class="btn btn-primary" data-goto-step="5">Avançar para Etapa 5: Gestão, Legado e Documentos →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================================
+               ETAPA 5: GESTÃO, TRIBUTAÇÃO, LEGADO, GOVERNANÇA E CHECKLIST
+               ======================================================== -->
+          <div class="diag-panel" id="step-5" data-step="5">
+
+            <!-- 5.1 Gestão e Tributação da Atividade Rural -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>5.1 Gestão Operacional e Tributação Atual (Planilha OURO — Aba 8)</h2>
+                  <p>Atividades econômicas desenvolvidas, regime tributário atual e liderança da operação.</p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Atividades Rurais e Imobiliárias Exercidas pela Família (marque todas que se aplicam)</label>
+                <div class="check-grid" id="grid-atividades">
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Cafeicultura"> <span>Cafeicultura</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Soja / Milho / Grãos"> <span>Soja / Milho / Grãos</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Pecuária de Corte"> <span>Pecuária de Corte (Cria/Recria/Engorda)</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Pecuária de Leite"> <span>Pecuária de Leite</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Cana-de-açúcar"> <span>Cana-de-açúcar</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Silvicultura / Eucalipto"> <span>Silvicultura / Eucalipto / Reflorestamento</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Hortifruti / Fruticultura"> <span>Hortifruti / Fruticultura</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Equinocultura / Genética"> <span>Equinocultura / Genética</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Arrendamento Rural"> <span>Arrendamento Rural (recebe renda)</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Parceria Rural"> <span>Parceria Agrícola / Pecuária</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Condomínio / Comodato Rural"> <span>Condomínio ou Comodato Rural</span></label>
+                  <label class="check-pill"><input type="checkbox" name="atividades" value="Locação / Venda de Imóveis Urbanos"> <span>Locação / Venda de Imóveis Urbanos</span></label>
+                </div>
+              </div>
+
+              <div class="field-grid-3" style="margin-top: 18px;">
+                <div class="field">
+                  <label for="trib_regime_atual">Forma de Tributação Predominante Hoje</label>
+                  <select id="trib_regime_atual" name="trib_regime_atual">
+                    <option value="Pessoa Física — Livro Caixa (alíquota até 27,5%)">Pessoa Física — Livro Caixa (alíquota até 27,5%)</option>
+                    <option value="Pessoa Física — Arbitramento 20% da Receita Bruta">Pessoa Física — Arbitramento 20% da Receita Bruta</option>
+                    <option value="Misto (parte na PF e parte em PJ)">Misto (parte na PF e parte em PJ)</option>
+                    <option value="Pessoa Jurídica — Lucro Presumido">Pessoa Jurídica — Lucro Presumido</option>
+                    <option value="Pessoa Jurídica — Lucro Real">Pessoa Jurídica — Lucro Real</option>
+                    <option value="Não sei informar (verificar com contador)">Não sei informar (verificar com contador)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="trib_receita_anual">Receita Bruta Anual Aproximada da Atividade (R$)</label>
+                  <input type="text" id="trib_receita_anual" name="trib_receita_anual" placeholder="Ex.: R$ 2.500.000,00">
+                </div>
+                <div class="field">
+                  <label for="trib_funrural">Recolhimento de FUNRURAL Hoje</label>
+                  <select id="trib_funrural" name="trib_funrural">
+                    <option value="Sobre a comercialização da produção (1,5%)">Sobre a comercialização da produção (1,5%)</option>
+                    <option value="Sobre a folha de pagamento (opção previdenciária)">Sobre a folha de pagamento (opção previdenciária)</option>
+                    <option value="Não sei informar">Não sei informar</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field">
+                  <label for="gest_admin_atual">Quem é o Administrador Atual dos Negócios?</label>
+                  <input type="text" id="gest_admin_atual" name="gest_admin_atual" placeholder="Ex.: Patriarca (Sr. José) + Filho mais velho">
+                </div>
+                <div class="field">
+                  <label for="gest_admin_futuro">Quem é o Provável Sucessor / Administrador Futuro?</label>
+                  <input type="text" id="gest_admin_futuro" name="gest_admin_futuro" placeholder="Ex.: Filho Lucas (Eng. Agrônomo) / Ainda indefinido">
+                </div>
+                <div class="field">
+                  <label for="gest_contador">Contador / Escritório Contábil de Confiança da Família</label>
+                  <input type="text" id="gest_contador" name="gest_contador" placeholder="Nome / Cidade / Telefone (opcional)">
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.2 Avaliação do Legado do Produtor Rural (Mód. 04 Verbatim) -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>5.2 Avaliação do Legado do Produtor Rural</h2>
+                  <p>Quadro oficial de maturidade documental e sucessória do legado (Módulo 04 — Estudo de Viabilidade Patrimonial).</p>
+                </div>
+                <span class="badge">Instrumento Oficial EVPF</span>
+              </div>
+
+              <div id="quadro-legado-container">
+                <div class="legado-row">
+                  <span><strong>1.</strong> PATRIMÔNIO IMOBILIÁRIO ESTÁ TOTALMENTE REGULARIZADO?</span>
+                  <select name="legado_1"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>1a.</strong> Tem averbação junto ao cartório da área construída?</span>
+                  <select name="legado_1a"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>1b.</strong> Tudo está declarado no imposto de renda do produtor rural?</span>
+                  <select name="legado_1b"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row" style="background: var(--verde-50); font-weight: 700; color: var(--verde-900);">
+                  <span>2. SE NÃO ESTIVER REGULARIZADO:</span>
+                  <span></span>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2a.</strong> Tem escritura pública?</span>
+                  <select name="legado_2a"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2a.i.</strong> Da escritura pública está sem Registro junto ao cartório de imóveis?</span>
+                  <select name="legado_2a_i"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2b.</strong> Tem contrato de compra e venda?</span>
+                  <select name="legado_2b"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2c.</strong> Tem termo de posse?</span>
+                  <select name="legado_2c"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2d.</strong> Tem imóveis em nome de terceiros?</span>
+                  <select name="legado_2d"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>2e.</strong> Tem imóveis em nome de uma pessoa jurídica?</span>
+                  <select name="legado_2e"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>3.</strong> A FAMÍLIA TEM CONHECIMENTO SOBRE TODO O LEGADO?</span>
+                  <select name="legado_3"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>4.</strong> JÁ ESTÁ DEFINIDO QUEM SERÁ O SUCESSOR?</span>
+                  <select name="legado_4"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>4a.</strong> Este sucessor tem um bom relacionamento com a cooperativa?</span>
+                  <select name="legado_4a"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>4b.</strong> Este sucessor tem um bom relacionamento com os bancos?</span>
+                  <select name="legado_4b"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>4c.</strong> Este sucessor tem um bom relacionamento com fornecedores e parceiros?</span>
+                  <select name="legado_4c"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>4d.</strong> Existe algum protocolo familiar para reforçar o legado do produtor rural?</span>
+                  <select name="legado_4d"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>5.</strong> TEM CONTRATO ESCRITO DE ARRENDAMENTO, PARCERIA, COMODATO OU OUTRA MODALIDADE?</span>
+                  <select name="legado_5"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+                <div class="legado-row">
+                  <span><strong>6.</strong> TEM CONTRATO VERBAL DE ARRENDAMENTO, PARCERIA, COMODATO OU OUTRA MODALIDADE?</span>
+                  <select name="legado_6"><option value="">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select>
+                </div>
+              </div>
+
+              <div class="field" style="margin-top: 22px;">
+                <label><strong>8. COMO ESTÁ A ORGANIZAÇÃO DO LEGADO HOJE? (Nota de 0 a 10)</strong></label>
+                <input type="hidden" id="legado_nota" name="legado_nota" value="">
+                <div class="nota-scale" id="legado-nota-buttons" role="radiogroup" aria-label="Nota de 0 a 10 para organização do legado">
+                  <button type="button" class="nota-btn" data-nota="0">0</button>
+                  <button type="button" class="nota-btn" data-nota="1">1</button>
+                  <button type="button" class="nota-btn" data-nota="2">2</button>
+                  <button type="button" class="nota-btn" data-nota="3">3</button>
+                  <button type="button" class="nota-btn" data-nota="4">4</button>
+                  <button type="button" class="nota-btn" data-nota="5">5</button>
+                  <button type="button" class="nota-btn" data-nota="6">6</button>
+                  <button type="button" class="nota-btn" data-nota="7">7</button>
+                  <button type="button" class="nota-btn" data-nota="8">8</button>
+                  <button type="button" class="nota-btn" data-nota="9">9</button>
+                  <button type="button" class="nota-btn" data-nota="10">10</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.3 Diagnóstico de Governança Familiar -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>5.3 Diagnóstico de Governança Corporativa e Familiar</h2>
+                  <p>Avaliação da comunicação entre gerações, processo decisório e prioridades estratégicas da família.</p>
+                </div>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field">
+                  <label for="gov_g5">Como avalia a comunicação entre os membros da família sobre os negócios?</label>
+                  <select id="gov_g5" name="gov_g5">
+                    <option value="">Selecione</option>
+                    <option value="Excelente">Excelente</option>
+                    <option value="Boa">Boa</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Ruim">Ruim</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="gov_g7">Há reuniões regulares para discutir o andamento dos negócios?</label>
+                  <select id="gov_g7" name="gov_g7">
+                    <option value="">Selecione</option>
+                    <option value="Sim, semanalmente">Sim, semanalmente</option>
+                    <option value="Sim, mensalmente">Sim, mensalmente</option>
+                    <option value="Sim, ocasionalmente">Sim, ocasionalmente</option>
+                    <option value="Não">Não</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="gov_g8">Cada negócio/fazenda tem seus resultados analisados de forma separada?</label>
+                  <select id="gov_g8" name="gov_g8">
+                    <option value="">Selecione</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não (caixa único misturado)">Não (caixa único misturado)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-grid-4">
+                <div class="field">
+                  <label for="gov_g9">Eficiência da gestão atual</label>
+                  <select id="gov_g9" name="gov_g9">
+                    <option value="">Selecione</option>
+                    <option value="Muito eficiente">Muito eficiente</option>
+                    <option value="Eficiente">Eficiente</option>
+                    <option value="Pouco eficiente">Pouco eficiente</option>
+                    <option value="Ineficiente">Ineficiente</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="gov_g10">Há um plano estratégico claro para o grupo?</label>
+                  <select id="gov_g10" name="gov_g10">
+                    <option value="">Selecione</option>
+                    <option value="Há um plano definido, documentado e compartilhado">Há um plano definido, documentado e compartilhado</option>
+                    <option value="Sim, mas pouco discutido">Sim, mas pouco discutido</option>
+                    <option value="Não sei">Não sei / Não há</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="gov_g12">Já existe um plano de sucessão formalizado?</label>
+                  <select id="gov_g12" name="gov_g12">
+                    <option value="">Selecione</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Somente ideia">Somente ideia</option>
+                    <option value="Nada foi discutido">Nada foi discutido</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="gov_g14">Todos os membros da família concordam com os rumos?</label>
+                  <select id="gov_g14" name="gov_g14">
+                    <option value="">Selecione</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                    <option value="Não sei">Não sei</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Prioridades e Objetivos Principais da Família com este Trabalho (marque os principais)</label>
+                <div class="check-grid" id="grid-objetivos">
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Planejamento Sucessório em Vida (evitar inventário)"> <span>Planejamento Sucessório em Vida (evitar inventário)</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Constituição de Holding Rural / Familiar"> <span>Constituição de Holding Rural / Familiar</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Proteção Patrimonial Lícita contra Riscos Operacionais"> <span>Proteção Patrimonial Lícita contra Riscos Operacionais</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Redução Lícita de Carga Tributária (IRPF / ITCMD / Ganho de Capital)"> <span>Eficiência Tributária (IR, ITCMD, Arrendamento e Ganho de Capital)</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Protocolo Familiar e Regras para Herdeiros/Cônjuges"> <span>Protocolo Familiar e Regras para Herdeiros/Cônjuges</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Avaliação Pericial de Imóvel Rural (PTAM ABNT NBR 14653-3)"> <span>Avaliação Pericial de Fazenda (PTAM — ABNT NBR 14653-3)</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Expansão / Aquisição de Novas Áreas"> <span>Expansão / Aquisição de Novas Áreas</span></label>
+                  <label class="check-pill"><input type="checkbox" name="objetivos" value="Profissionalização da Gestão e Separação Caixa Família x Fazenda"> <span>Profissionalização da Gestão (Separar Caixa Família × Fazenda)</span></label>
+                </div>
+              </div>
+
+              <div class="field-grid" style="margin-top: 18px;">
+                <div class="field">
+                  <label for="gov_g6">Maiores desafios enfrentados pela família na tomada de decisões e elaboração da sucessão</label>
+                  <textarea id="gov_g6" name="gov_g6" rows="2" placeholder="Ex.: Dificuldade em separar remuneração de quem trabalha na fazenda da distribuição de lucros dos herdeiros que moram fora."></textarea>
+                </div>
+                <div class="field">
+                  <label for="gov_g18">O que você acredita que mais ajudaria a proteger a harmonia e os resultados do grupo familiar?</label>
+                  <textarea id="gov_g18" name="gov_g18" rows="2" placeholder="Ex.: Deixar regras claras em vida enquanto os pais estão lúcidos e no comando (usufruto e cláusulas protetivas)."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.4 Checklist de Documentos Já Disponíveis -->
+            <div class="diag-card">
+              <div class="diag-card-header">
+                <div>
+                  <h2>5.4 Checklist de Documentos que a Família Já Possui Fácil Acesso</h2>
+                  <p>Marque os documentos que você já possui em mãos (físico ou PDF) para agilizar a montagem da pasta do caso (Mód. 03 &amp; 05).</p>
+                </div>
+              </div>
+
+              <div class="check-grid" id="grid-documentos">
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="IRPF do patriarca e da matriarca"> <span>Declaração de IRPF do patriarca e da matriarca</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="IRPF dos filhos"> <span>Declaração de IRPF dos filhos</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Certidões de casamento / nascimento e pacto antenupcial"> <span>Certidões de casamento/nascimento dos familiares</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Matrículas atualizadas dos imóveis (CRI)"> <span>Certidões de matrícula dos imóveis (Cartório de Registro)</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Escrituras, contratos de compra e venda ou termos de posse"> <span>Escrituras, contratos de compra e venda ou posse</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="DITR (Declaração de ITR) + DIAT/DIAC e Carnê ITR/IPTU"> <span>DITR (Declaração do ITR) e Carnês de ITR / IPTU</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="CCIR (INCRA) e CAR (Cadastro Ambiental Rural)"> <span>CCIR (INCRA) e CAR (Cadastro Ambiental Rural)</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Georreferenciamento / Laudos de Avaliação anteriores"> <span>Georreferenciamento / Laudos de Avaliação das áreas</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Contratos de arrendamento, parceria ou comodato"> <span>Contratos de arrendamento, parceria ou comodato vigentes</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Contratos sociais e IRPJ das empresas existentes"> <span>Contratos sociais e IRPJ das empresas existentes</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Cédulas de crédito rural / extratos de financiamentos"> <span>Cédulas de crédito rural / extratos de financiamentos</span></label>
+                <label class="check-pill"><input type="checkbox" name="docs_disp" value="Relação de processos administrativos ou judiciais"> <span>Relação de processos administrativos ou judiciais</span></label>
+              </div>
+
+              <div class="diag-step-footer">
+                <button type="button" class="btn btn-light" data-goto-step="4">← Voltar para Passivos</button>
+                <button type="button" class="btn btn-primary" data-goto-step="6">Gerar Dossiê Consolidado (Etapa 6) →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================================
+               ETAPA 6: DOSSIÊ CONSOLIDADO, IMPRESSÃO PDF E ENVIO
+               ======================================================== -->
+          <div class="diag-panel" id="step-6" data-step="6">
+            <div class="diag-card no-print">
+              <div class="diag-card-header">
+                <div>
+                  <h2>6. Revisão Final, Exportação e Envio Confidencial</h2>
+                  <p>Confira abaixo o Dossiê Patrimonial e Familiar gerado a partir das informações preenchidas. Escolha como deseja salvar ou enviar à equipe da Raízes.</p>
+                </div>
+              </div>
+
+              <div class="consent-box">
+                <input type="checkbox" id="diag_lgpd_consent" name="diag_lgpd_consent" checked>
+                <label for="diag_lgpd_consent">
+                  Autorizo o uso destas informações pela <strong>Raízes Proteção Patrimonial Rural</strong> exclusivamente para análise preliminar de viabilidade patrimonial e sucessória da minha família, sob estrito dever de sigilo e em conformidade com a <a href="privacidade.html" target="_blank" style="text-decoration: underline; color: var(--verde-800); font-weight: 600;">Política de Privacidade (LGPD)</a>. Estou ciente de que este levantamento inicial tem caráter informativo e que o diagnóstico definitivo depende da análise documental e validação técnica individualizada.
+                </label>
+              </div>
+
+              <div id="diag-action-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px;">
+                <button type="button" class="btn btn-wa btn-lg" id="btn-send-whatsapp">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+                  Enviar Resumo Estruturado no WhatsApp
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" id="btn-print-dossie">
+                  Imprimir / Salvar Dossiê em PDF (A4)
+                </button>
+                <button type="button" class="btn btn-terra btn-lg" id="btn-export-json">
+                  Baixar Arquivo do Diagnóstico (.json)
+                </button>
+                <button type="button" class="btn btn-light btn-lg" id="btn-copy-text">
+                  Copiar Relatório em Texto
+                </button>
+              </div>
+              <p style="font-size: .84rem; color: var(--tinta-3); margin-top: 8px;">
+                Dica: Ao clicar em <strong>"Imprimir / Salvar Dossiê em PDF"</strong> ou <strong>"Baixar Arquivo (.json)"</strong>, você pode anexar o arquivo completo na conversa de WhatsApp com nosso especialista para que sua ficha já entre diretamente no sistema de estudo de viabilidade.
+              </p>
+            </div>
+
+            <!-- DOSSIÊ RENDERIZADO DINAMICAMENTE (IMPRIMÍVEL EM A4) -->
+            <div class="dossie-box" id="dossie-render">
+              <!-- Preenchido via js/diagnostico.js -->
+            </div>
+
+            <div class="diag-step-footer no-print">
+              <button type="button" class="btn btn-light" data-goto-step="5">← Voltar e Editar Respostas</button>
+              <button type="button" class="btn btn-wa" id="btn-send-whatsapp-bottom">Enviar para Especialista no WhatsApp →</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ INSTITUCIONAL ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand">
+            <picture>
+              <source srcset="assets/simbolo-real-sm.webp" type="image/webp">
+              <img src="assets/simbolo-real-sm.png" alt="Símbolo Raízes" width="103" height="120" style="height: 38px; width: auto;">
+            </picture>
+            <span>RAÍZES<small style="color: var(--terra-200);">PROTEÇÃO PATRIMONIAL RURAL</small></span>
+          </div>
+          <p class="tagline">Quem planta hoje, protege o amanhã.</p>
+          <p style="margin-top: 14px; font-size: .84rem; line-height: 1.5; color: #8E9E7F;">
+            Assessoria de governança, proteção patrimonial e perícia de imóveis rurais em Minas Gerais e no Brasil.
+          </p>
+        </div>
+
+        <div>
+          <h3>Soluções</h3>
+          <a href="index.html#solucoes">Holding Rural &amp; Familiar</a>
+          <a href="index.html#solucoes">Planejamento Sucessório</a>
+          <a href="index.html#solucoes">Eficiência Tributária Agrícola</a>
+          <a href="index.html#solucoes">Avaliação Pericial PTAM</a>
+          <a href="diagnostico.html">Diagnóstico Patrimonial Completo</a>
+        </div>
+
+        <div>
+          <h3>Institucional</h3>
+          <a href="index.html#metodologia">Como Funciona</a>
+          <a href="index.html#autoridade">Corpo de Especialistas</a>
+          <a href="index.html#faq">Dúvidas Frequentes</a>
+          <a href="privacidade.html">Política de Privacidade (LGPD)</a>
+        </div>
+
+        <div>
+          <h3>Contato Direto</h3>
+          <a href="https://wa.me/5532920004387" target="_blank" rel="noopener">WhatsApp: (32) 92000-4387</a>
+          <a href="mailto:contato@raizes.agr.br">contato@raizes.agr.br</a>
+          <span style="display: block; margin-top: 12px; font-size: .82rem; color: #7F8E71;">Atendimento sob estrita confidencialidade.</span>
+        </div>
+      </div>
+
+      <div class="legal">
+        <span>© <span id="ano">2026</span> Raízes Proteção Patrimonial Rural. Marca Registrada no INPI.</span>
+        <span>Atendimento com sigilo, ética e visão de longo prazo.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/diagnostico.js"></script>
+</body>
+</html>

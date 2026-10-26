@@ -1355,3 +1355,467 @@ section.no-bottom { padding-bottom: 0; }
     padding: 68px 0;
   }
 }
+
+/* ============================================================
+   DIAGNÓSTICO PATRIMONIAL E FAMILIAR COMPLETO (diagnostico.html)
+   ============================================================ */
+
+.diag-hero {
+  background: linear-gradient(135deg, var(--verde-950) 0%, var(--verde-800) 100%);
+  color: #fff;
+  padding: 56px 0 48px;
+  border-bottom: 3px solid var(--terra-500);
+}
+.diag-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 14px;
+}
+.diag-hero p.lead {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 780px;
+  font-size: 1.08rem;
+}
+.diag-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.diag-save-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--verde-100);
+  padding: 7px 14px;
+  border-radius: var(--pill);
+  font-size: .85rem;
+  font-weight: 500;
+}
+.diag-save-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6EE7B7;
+  display: inline-block;
+}
+.diag-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 15px;
+  border-radius: var(--radius-sm);
+  font-size: .86rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--terra-200);
+}
+
+/* KPIs ao vivo no topo do Diagnóstico */
+.diag-kpi-bar {
+  background: var(--areia-clara);
+  border-bottom: 1px solid var(--borda);
+  padding: 18px 0;
+  position: sticky;
+  top: 78px;
+  z-index: 150;
+  box-shadow: var(--shadow-sm);
+}
+.diag-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.diag-kpi-item {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+.diag-kpi-item small {
+  display: block;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--tinta-3);
+  font-weight: 700;
+}
+.diag-kpi-item strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.08rem;
+  color: var(--verde-900);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Navegação por Abas / Etapas */
+.diag-steps-nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.diag-step-btn {
+  background: var(--areia-clara);
+  border: 1.5px solid var(--borda);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all .18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--tinta-2);
+}
+.diag-step-btn:hover {
+  border-color: var(--terra-500);
+  background: #fff;
+}
+.diag-step-btn.active {
+  background: var(--verde-900);
+  border-color: var(--verde-900);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.diag-step-num {
+  font-size: .73rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 700;
+  color: var(--terra-600);
+}
+.diag-step-btn.active .diag-step-num {
+  color: var(--terra-200);
+}
+.diag-step-title {
+  font-family: var(--display);
+  font-size: .98rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Painéis de Etapa */
+.diag-panel {
+  display: none;
+}
+.diag-panel.active {
+  display: block;
+}
+
+.diag-card {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.diag-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--borda);
+}
+.diag-card-header h2 {
+  font-size: 1.45rem;
+  color: var(--verde-900);
+  margin-bottom: 4px;
+}
+.diag-card-header p {
+  font-size: .94rem;
+  color: var(--tinta-3);
+  margin: 0;
+}
+.diag-subhead {
+  font-size: 1.1rem;
+  color: var(--verde-800);
+  margin: 22px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--borda);
+  font-family: var(--display);
+}
+
+.field-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.field-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Repeaters (Filhos, Imóveis, Móveis, Dívidas) */
+.repeater-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.repeater-item {
+  background: var(--areia-clara);
+  border: 1px solid var(--borda-forte);
+  border-left: 4px solid var(--verde-700);
+  border-radius: var(--radius);
+  padding: 22px;
+  position: relative;
+}
+.repeater-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borda);
+}
+.repeater-item-top strong {
+  font-family: var(--display);
+  color: var(--verde-900);
+  font-size: 1.05rem;
+}
+.btn-remove-item {
+  background: #fff;
+  color: var(--erro);
+  border: 1px solid rgba(198, 40, 40, 0.3);
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-remove-item:hover {
+  background: var(--erro);
+  color: #fff;
+}
+.btn-add-item {
+  background: var(--verde-50);
+  color: var(--verde-800);
+  border: 1.5px dashed var(--verde-700);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .15s;
+}
+.btn-add-item:hover {
+  background: var(--verde-100);
+  border-style: solid;
+}
+
+/* Chips de múltipla escolha (Culturas / Objetivos / Checklist) */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+}
+.check-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--areia-clara);
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  cursor: pointer;
+  font-size: .92rem;
+  line-height: 1.4;
+  transition: border-color .15s, background .15s;
+}
+.check-pill:hover {
+  border-color: var(--terra-500);
+  background: #fff;
+}
+.check-pill input[type="checkbox"] {
+  margin-top: 3px;
+  width: 17px;
+  height: 17px;
+  accent-color: var(--verde-700);
+  flex-shrink: 0;
+}
+
+/* Quadro Sim/Não — Avaliação do Legado */
+.legado-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--borda);
+  font-size: .94rem;
+}
+.legado-row:nth-child(even) {
+  background: var(--areia-clara);
+}
+.legado-row select {
+  width: 120px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--borda-forte);
+  background: #fff;
+  font-weight: 600;
+}
+.nota-scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.nota-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--borda-forte);
+  background: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  color: var(--tinta);
+  transition: all .15s;
+}
+.nota-btn:hover {
+  border-color: var(--terra-500);
+}
+.nota-btn.selected {
+  background: var(--verde-800);
+  border-color: var(--verde-800);
+  color: #fff;
+}
+
+/* Navegação rodapé entre etapas */
+.diag-step-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+}
+
+/* Dossiê Resumo Consolidado */
+.dossie-box {
+  background: #fff;
+  border: 2px solid var(--verde-800);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow);
+}
+.dossie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 22px;
+  font-size: .92rem;
+}
+.dossie-table th, .dossie-table td {
+  border: 1px solid var(--borda);
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.dossie-table th {
+  background: var(--areia);
+  color: var(--verde-900);
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .diag-kpi-grid, .diag-steps-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .field-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .diag-kpi-bar {
+    position: static;
+  }
+  .diag-kpi-grid, .diag-steps-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .field-grid-3, .field-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .diag-card, .dossie-box {
+    padding: 22px 16px;
+  }
+  .legado-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .legado-row select {
+    width: 100%;
+  }
+}
+
+@media print {
+  .site-header, .diag-toolbar, .diag-kpi-bar, .diag-steps-nav,
+  .diag-step-footer, .wa-float, .mobile-sticky-bar, .no-print,
+  .site-footer {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    padding: 0 !important;
+  }
+  .diag-hero {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 12px 0 !important;
+    border-bottom: 2px solid #1F3D1A !important;
+  }
+  .diag-hero h1 {
+    color: #1F3D1A !important;
+    font-size: 18pt !important;
+  }
+  .diag-hero p.lead, .diag-hero .eyebrow {
+    color: #333 !important;
+  }
+  .diag-panel {
+    display: none !important;
+  }
+  #step-6 {
+    display: block !important;
+  }
+  .dossie-box {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}
+
