@@ -569,12 +569,12 @@ section.no-bottom { padding-bottom: 0; }
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .solucao-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--borda-forte);
+  box-shadow: 0 20px 40px rgba(24, 46, 20, 0.12);
+  border-color: var(--terra-500);
 }
 .solucao-thumb {
   height: 190px;
@@ -689,7 +689,7 @@ section.no-bottom { padding-bottom: 0; }
   color: var(--tinta-2);
   margin-bottom: 8px;
 }
-.sim-select, .sim-range {
+.sim-select {
   width: 100%;
   padding: 13px 16px;
   border: 1.5px solid var(--borda-forte);
@@ -698,10 +698,60 @@ section.no-bottom { padding-bottom: 0; }
   color: var(--tinta);
   font-size: 1rem;
   font-family: inherit;
+  transition: border-color .2s;
 }
 .sim-select:focus {
   outline: none;
   border-color: var(--verde-700);
+}
+
+/* Slider de Patrimônio Classe-A */
+.sim-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--areia-escura);
+  border-radius: var(--pill);
+  outline: none;
+  border: 1px solid var(--borda-forte);
+  padding: 0;
+  margin: 12px 0 6px 0;
+  cursor: pointer;
+}
+.sim-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--terra-600);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(184, 80, 48, 0.4);
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+.sim-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: var(--terra-700);
+}
+.sim-range::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--terra-600);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(184, 80, 48, 0.4);
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+.sim-range::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  background: var(--terra-700);
+}
+.sim-range:focus-visible {
+  outline: 2px solid var(--verde-700);
+  outline-offset: 3px;
 }
 .range-display {
   display: flex;
