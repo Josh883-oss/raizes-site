@@ -1130,6 +1130,41 @@
     }, 250);
   }
 
+  var currentActiveStep = 1;
+
+  function updateStickyBar(stepNum) {
+    var s = parseInt(stepNum, 10) || 1;
+    currentActiveStep = s;
+    var btnPrev = document.getElementById('btn-sticky-prev');
+    var btnNext = document.getElementById('btn-sticky-next');
+    if (!btnPrev || !btnNext) return;
+
+    if (s <= 1) {
+      btnPrev.disabled = true;
+      btnPrev.setAttribute('aria-disabled', 'true');
+    } else {
+      btnPrev.disabled = false;
+      btnPrev.removeAttribute('aria-disabled');
+    }
+
+    btnNext.classList.remove('btn-sticky-send');
+
+    if (s === 1) {
+      btnNext.innerHTML = 'Avançar: Imóveis (2/6) →';
+    } else if (s === 2) {
+      btnNext.innerHTML = 'Avançar: Bens e Rebanho (3/6) →';
+    } else if (s === 3) {
+      btnNext.innerHTML = 'Avançar: Passivos (4/6) →';
+    } else if (s === 4) {
+      btnNext.innerHTML = 'Avançar: Gestão (5/6) →';
+    } else if (s === 5) {
+      btnNext.innerHTML = 'Ver Dossiê e Concluir (6/6) →';
+    } else if (s === 6) {
+      btnNext.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg> Concluir no WhatsApp';
+      btnNext.classList.add('btn-sticky-send');
+    }
+  }
+
   function switchStep(stepNum) {
     var n = String(stepNum);
     document.querySelectorAll('.diag-step-btn').forEach(function (btn) {
@@ -1141,11 +1176,12 @@
       panel.classList.toggle('active', active);
     });
     updateKPIsAndDossie();
+    updateStickyBar(n);
     var navEl = document.querySelector('.diag-steps-nav');
     if (navEl) {
       var rect = navEl.getBoundingClientRect();
-      if (rect.top < 0 || rect.top > 300) {
-        window.scrollTo({ top: Math.max(0, navEl.offsetTop - 150), behavior: 'smooth' });
+      if (rect.top < 0 || rect.top > 250) {
+        window.scrollTo({ top: Math.max(0, navEl.offsetTop - 120), behavior: 'smooth' });
       }
     }
   }
@@ -1411,6 +1447,7 @@
       ensureMinimumRows();
       updateKPIsAndDossie();
     }
+    updateStickyBar(1);
 
     // Navegação por abas no topo
     document.querySelectorAll('.diag-step-btn').forEach(function (btn) {
@@ -1425,6 +1462,27 @@
         switchStep(btn.getAttribute('data-goto-step'));
       });
     });
+
+    // Barra Móvel Flutuante (Thumb Zone CRO)
+    var stickyPrev = document.getElementById('btn-sticky-prev');
+    if (stickyPrev) {
+      stickyPrev.addEventListener('click', function () {
+        if (currentActiveStep > 1) {
+          switchStep(currentActiveStep - 1);
+        }
+      });
+    }
+
+    var stickyNext = document.getElementById('btn-sticky-next');
+    if (stickyNext) {
+      stickyNext.addEventListener('click', function () {
+        if (currentActiveStep < 6) {
+          switchStep(currentActiveStep + 1);
+        } else {
+          sendToWhatsApp();
+        }
+      });
+    }
 
     // Botões de adicionar itens nos repeaters
     var addMap = {
