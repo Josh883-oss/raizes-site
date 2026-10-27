@@ -61,11 +61,26 @@
     <!-- ==================== HERO DO DIAGNÓSTICO ==================== -->
     <section class="diag-hero">
       <div class="container">
-        <div class="eyebrow eyebrow-light">Estudo de Viabilidade Patrimonial e Familiar (EVPF)</div>
+        <div class="eyebrow eyebrow-light">Estudo de Viabilidade Patrimonial e Familiar • Raízes Agro</div>
         <h1>Diagnóstico Patrimonial, Familiar e Sucessório</h1>
         <p class="lead">
-          Preencha os aspectos familiares, imóveis rurais e urbanos, maquinários, rebanho, passivos e governança para iniciarmos o estudo de viabilidade do seu caso. Seus dados ficam salvos automaticamente no seu próprio navegador e você pode gerar o dossiê em PDF ou encaminhar diretamente à nossa equipe.
+          Um instrumento confidencial e estruturado para mapear o futuro das suas terras, proteger sua família contra custos e disputas de inventário e planejar a continuidade do seu legado no agronegócio. Suas respostas ficam salvas no seu próprio dispositivo e você gera um Dossiê Preliminar consolidado ao final.
         </p>
+
+        <div class="diag-trust-badges">
+          <span class="diag-trust-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            100% Confidencial (Sigilo &amp; LGPD)
+          </span>
+          <span class="diag-trust-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Salvamento Automático no Dispositivo
+          </span>
+          <span class="diag-trust-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Gera Dossiê e Indicadores Imediatos
+          </span>
+        </div>
 
         <div class="diag-toolbar">
           <div class="diag-save-badge" id="autosave-status" aria-live="polite">
@@ -172,7 +187,12 @@
                   <h2>1.1 Identificação da Família e História do Legado</h2>
                   <p>Informações iniciais do núcleo familiar, contato de retorno e contexto histórico da construção do patrimônio.</p>
                 </div>
-                <span class="badge">Mód. 01 &amp; 02 — Script Rural</span>
+                <span class="badge">Núcleo Familiar &amp; Origem</span>
+              </div>
+
+              <div class="diag-insight-box">
+                <strong>💡 Por que o mapeamento familiar é o primeiro passo?</strong>
+                <p>Nenhuma terra prospera sem harmonia familiar. Compreender a história, a relação dos herdeiros com a atividade rural e o regime de bens dos titulares permite desenhar regras societárias sob medida — blindando a fazenda contra disputas de inventário e divórcios, sem engessar a administração.</p>
               </div>
 
               <div class="field-grid-3">
@@ -182,11 +202,11 @@
                 </div>
                 <div class="field">
                   <label for="fam_whatsapp">WhatsApp Principal para Retorno <span class="req">*</span></label>
-                  <input type="tel" id="fam_whatsapp" name="fam_whatsapp" placeholder="(32) 99999-9999" required>
+                  <input type="tel" id="fam_whatsapp" name="fam_whatsapp" inputmode="tel" placeholder="(32) 99999-9999" required>
                 </div>
                 <div class="field">
                   <label for="fam_email">E-mail de Contato</label>
-                  <input type="email" id="fam_email" name="fam_email" placeholder="seuemail@dominio.com.br">
+                  <input type="email" id="fam_email" name="fam_email" inputmode="email" placeholder="seuemail@dominio.com.br">
                 </div>
               </div>
 
@@ -230,7 +250,7 @@
               <div class="diag-card-header">
                 <div>
                   <h2>1.2 Titulares do Patrimônio (Patriarca / Matriarca / Sócios Fundadores)</h2>
-                  <p>Qualificação civil e regime de bens dos titulares atuais do patrimônio (Planilha OURO — Aba 1).</p>
+                  <p>Qualificação civil e regime de bens dos titulares atuais do patrimônio (Regime de Bens e Qualificação dos Titulares).</p>
                 </div>
               </div>
 
@@ -246,7 +266,7 @@
                 </div>
                 <div class="field">
                   <label for="tit1_cpf">CPF (opcional nesta fase)</label>
-                  <input type="text" id="tit1_cpf" name="tit1_cpf" placeholder="000.000.000-00">
+                  <input type="text" id="tit1_cpf" name="tit1_cpf" inputmode="numeric" placeholder="000.000.000-00">
                 </div>
                 <div class="field">
                   <label for="tit1_profissao">Profissão / Atividade Principal</label>
@@ -278,7 +298,7 @@
                 </div>
                 <div class="field">
                   <label for="tit1_data_casamento">Ano / Data do Casamento ou União</label>
-                  <input type="text" id="tit1_data_casamento" name="tit1_data_casamento" placeholder="Ex.: 1988 (antes/depois das aquisições)">
+                  <input type="text" id="tit1_data_casamento" name="tit1_data_casamento" inputmode="numeric" placeholder="Ex.: 1988 (antes/depois das aquisições)">
                 </div>
                 <div class="field">
                   <label for="tit1_pacto_antenupcial">Possui Pacto Antenupcial ou Contrato de União Estável?</label>
@@ -303,7 +323,7 @@
                 </div>
                 <div class="field">
                   <label for="tit2_cpf">CPF (opcional nesta fase)</label>
-                  <input type="text" id="tit2_cpf" name="tit2_cpf" placeholder="000.000.000-00">
+                  <input type="text" id="tit2_cpf" name="tit2_cpf" inputmode="numeric" placeholder="000.000.000-00">
                 </div>
                 <div class="field">
                   <label for="tit2_atuacao">Participação na Atividade Rural</label>
@@ -330,7 +350,7 @@
 
               <div class="repeater-list" id="lista-herdeiros"></div>
 
-              <h3 class="diag-subhead">Questões Sucessórias Importantes da Família (Script Rural 1.1)</h3>
+              <h3 class="diag-subhead">Questões Sucessórias Importantes da Família (Diretrizes e Expectativas Sucessórias)</h3>
               <div class="field-grid-3">
                 <div class="field">
                   <label for="suc_filhos_fora_casamento">Há filhos de casamentos ou relacionamentos anteriores?</label>
@@ -378,16 +398,21 @@
           </div>
 
           <!-- ========================================================
-               ETAPA 2: IMÓVEIS RURAIS E URBANOS (PLANILHA OURO ABA 3)
+               ETAPA 2: IMÓVEIS RURAIS E URBANOS
                ======================================================== -->
           <div class="diag-panel" id="step-2" data-step="2">
             <div class="diag-card">
               <div class="diag-card-header">
                 <div>
                   <h2>2. Levantamento de Bens Imóveis (Rurais e Urbanos)</h2>
-                  <p>Cadastre cada fazenda, gleba/matrícula ou imóvel urbano. A comparação entre o <strong>Valor de Mercado</strong>, o <strong>Valor Declarado no IRPF</strong> e o <strong>VTN/ITR</strong> é a base do Estudo de Viabilidade Patrimonial (Planilha OURO — Aba 3).</p>
+                  <p>Cadastre cada fazenda, gleba/matrícula ou imóvel urbano. A comparação entre o <strong>Valor de Mercado</strong>, o <strong>Valor Declarado no IRPF</strong> e o <strong>VTN/ITR</strong> é a base do Estudo de Viabilidade Patrimonial.</p>
                 </div>
                 <button type="button" class="btn-add-item" id="btn-add-imovel">+ Adicionar Imóvel Rural ou Urbano</button>
+              </div>
+
+              <div class="diag-insight-box">
+                <strong>💡 Por que informamos Valor de Mercado, Valor no IRPF e ITR/VTN?</strong>
+                <p>O <strong>Valor no IRPF</strong> é o seu custo histórico de aquisição. O <strong>ITR/VTN</strong> é o valor da terra nua cadastrado na Receita Federal. O <strong>Valor de Mercado</strong> é a avaliação real atual. O cruzamento desses três números revela a melhor rota fiscal para integralizar as fazendas na holding rural sem pagar imposto indevido de Ganho de Capital e otimizando o ITCMD estadual.</p>
               </div>
 
               <div class="repeater-list" id="lista-imoveis"></div>
@@ -437,7 +462,7 @@
               <div class="diag-card-header">
                 <div>
                   <h2>3.2 Maquinários Agrícolas, Implementos, Caminhões e Veículos (Bens Móveis)</h2>
-                  <p>Tratores, colheitadeiras, pulverizadores, secadores de café, pivôs, caminhões, utilitários e aeronaves (Planilha OURO — Aba 4).</p>
+                  <p>Tratores, colheitadeiras, pulverizadores, secadores de café, pivôs, caminhões, utilitários e frotas de produção.</p>
                 </div>
                 <button type="button" class="btn-add-item" id="btn-add-movel">+ Adicionar Maquinário / Veículo / Lote</button>
               </div>
@@ -448,8 +473,8 @@
             <div class="diag-card">
               <div class="diag-card-header">
                 <div>
-                  <h2>3.3 Rebanho / Bens Semoventes</h2>
-                  <p>Bovinos de corte, gado leiteiro, genética/matrizes, equinos ou outros rebanhos (Planilha OURO — Aba 4).</p>
+                  <h2>3.3 Rebanho / Bens Semoventes (Ativo Biológico)</h2>
+                  <p>Bovinos de corte, gado leiteiro, genética/matrizes, equinos ou outros rebanhos de exploração agropecuária.</p>
                 </div>
                 <button type="button" class="btn-add-item" id="btn-add-semovente">+ Adicionar Rebanho / Semoventes</button>
               </div>
@@ -483,10 +508,16 @@
               <div class="diag-card-header">
                 <div>
                   <h2>4.1 Crédito Rural, Financiamentos Bancários, CPRs e Dívidas</h2>
-                  <p>Essencial para verificar garantias reais (hipoteca/alienação fiduciária) que exigem <strong>Termo de Anuência do Banco</strong> antes da integralização de imóveis na holding (Planilha OURO — Aba 5).</p>
+                  <p>Mapeamento das operações de crédito para planejar a <strong>anuência bancária</strong> prévia antes da transferência de imóveis para a holding.</p>
                 </div>
                 <button type="button" class="btn-add-item" id="btn-add-divida">+ Adicionar Operação de Crédito / Dívida</button>
               </div>
+
+              <div class="diag-insight-box">
+                <strong>🔒 A holding rural interfere no meu Crédito Agrícola ou Custeio?</strong>
+                <p>Não. O crédito rural é o combustível da sua safra. Mapeamos os financiamentos e garantias (hipotecas e alienações fiduciárias) justamente para providenciar a anuência prévia dos bancos credores (Banco do Brasil, Sicoob, Sicredi, etc.), garantindo que sua capacidade de tomar recursos continue 100% preservada.</p>
+              </div>
+
               <div class="repeater-list" id="lista-dividas"></div>
             </div>
 
@@ -494,7 +525,7 @@
               <div class="diag-card-header">
                 <div>
                   <h2>4.2 Processos Administrativos, Judiciais e Contingências</h2>
-                  <p>Mapeamento preventivo para garantir que qualquer reorganização patrimonial seja 100% lícita, sem risco de caracterização de fraude contra credores ou à execução (Mód. 05 — Ativos e Passivos).</p>
+                  <p>Mapeamento preventivo para garantir que a reorganização patrimonial seja 100% lícita, segura e sem riscos tributários ou trabalhistas futuros.</p>
                 </div>
                 <button type="button" class="btn-add-item" id="btn-add-processo">+ Adicionar Processo / Contingência</button>
               </div>
@@ -532,8 +563,8 @@
             <div class="diag-card">
               <div class="diag-card-header">
                 <div>
-                  <h2>5.1 Gestão Operacional e Tributação Atual (Planilha OURO — Aba 8)</h2>
-                  <p>Atividades econômicas desenvolvidas, regime tributário atual e liderança da operação.</p>
+                  <h2>5.1 Gestão Operacional e Tributação Atual</h2>
+                  <p>Atividades econômicas desenvolvidas, regime tributário atual e liderança da operação no agronegócio.</p>
                 </div>
               </div>
 
@@ -569,7 +600,7 @@
                 </div>
                 <div class="field">
                   <label for="trib_receita_anual">Receita Bruta Anual Aproximada da Atividade (R$)</label>
-                  <input type="text" id="trib_receita_anual" name="trib_receita_anual" placeholder="Ex.: R$ 2.500.000,00">
+                  <input type="text" id="trib_receita_anual" name="trib_receita_anual" inputmode="decimal" placeholder="Ex.: R$ 2.500.000,00">
                 </div>
                 <div class="field">
                   <label for="trib_funrural">Recolhimento de FUNRURAL Hoje</label>
@@ -597,14 +628,14 @@
               </div>
             </div>
 
-            <!-- 5.2 Avaliação do Legado do Produtor Rural (Mód. 04 Verbatim) -->
+            <!-- 5.2 Avaliação do Legado do Produtor Rural -->
             <div class="diag-card">
               <div class="diag-card-header">
                 <div>
                   <h2>5.2 Avaliação do Legado do Produtor Rural</h2>
-                  <p>Quadro oficial de maturidade documental e sucessória do legado (Módulo 04 — Estudo de Viabilidade Patrimonial).</p>
+                  <p>Mapeamento de segurança documental, regularidade fundiária e maturidade sucessória da família.</p>
                 </div>
-                <span class="badge">Instrumento Oficial EVPF</span>
+                <span class="badge">Maturidade do Legado</span>
               </div>
 
               <div id="quadro-legado-container">
@@ -812,7 +843,7 @@
               <div class="diag-card-header">
                 <div>
                   <h2>5.4 Checklist de Documentos que a Família Já Possui Fácil Acesso</h2>
-                  <p>Marque os documentos que você já possui em mãos (físico ou PDF) para agilizar a montagem da pasta do caso (Mód. 03 &amp; 05).</p>
+                  <p>Marque os documentos que você já possui em mãos (físico ou PDF) para agilizar o estudo do caso.</p>
                 </div>
               </div>
 
@@ -850,6 +881,31 @@
                 </div>
               </div>
 
+              <!-- Box O que acontece agora -->
+              <div class="next-steps-card">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  O que acontece após o envio do seu diagnóstico?
+                </h3>
+                <div class="next-steps-grid">
+                  <div class="next-step-item">
+                    <span class="next-step-badge">1</span>
+                    <strong>Análise Sob Estrito Sigilo</strong>
+                    <p>Nossos especialistas em holding rural recebem suas informações e iniciam o estudo preliminar de viabilidade e economia fiscal.</p>
+                  </div>
+                  <div class="next-step-item">
+                    <span class="next-step-badge">2</span>
+                    <strong>Simulação Tributária &amp; Societária</strong>
+                    <p>Calculamos os cenários de ITCMD, Ganho de Capital e proteção dos imóveis, confrontando o modelo tradicional com a holding.</p>
+                  </div>
+                  <div class="next-step-item">
+                    <span class="next-step-badge">3</span>
+                    <strong>Apresentação Personalizada</strong>
+                    <p>Entramos em contato no WhatsApp informado para apresentar os números consolidados e tirar todas as dúvidas da família.</p>
+                  </div>
+                </div>
+              </div>
+
               <div class="consent-box">
                 <input type="checkbox" id="diag_lgpd_consent" name="diag_lgpd_consent" checked>
                 <label for="diag_lgpd_consent">
@@ -859,23 +915,27 @@
 
               <div id="diag-action-feedback" class="form-feedback" role="status" aria-live="polite"></div>
 
-              <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px;">
-                <button type="button" class="btn btn-wa btn-lg" id="btn-send-whatsapp">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
-                  Concluir e Enviar (WhatsApp + E-mail)
-                </button>
-                <button type="button" class="btn btn-primary btn-lg" id="btn-send-email">
-                  Enviar Dossiê por E-mail (Raízes)
-                </button>
-                <button type="button" class="btn btn-terra btn-lg" id="btn-print-dossie">
-                  Imprimir / Salvar Dossiê em PDF (A4)
-                </button>
-                <button type="button" class="btn btn-light btn-lg" id="btn-export-json">
-                  Baixar Arquivo (.json p/ Sistema)
-                </button>
-                <button type="button" class="btn btn-light btn-lg" id="btn-copy-text">
-                  Copiar Relatório em Texto
-                </button>
+              <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 12px;">
+                <div>
+                  <button type="button" class="btn btn-wa btn-lg" id="btn-send-whatsapp" style="width: 100%; justify-content: center; font-size: 1.12rem; padding: 18px 24px; box-shadow: 0 4px 14px rgba(37,211,102,.35);">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+                    Concluir e Enviar Diagnóstico (WhatsApp + E-mail)
+                  </button>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <button type="button" class="btn btn-primary" id="btn-send-email">
+                    Enviar Dossiê por E-mail (Raízes)
+                  </button>
+                  <button type="button" class="btn btn-terra" id="btn-print-dossie">
+                    Imprimir / Salvar Dossiê em PDF (A4)
+                  </button>
+                  <button type="button" class="btn btn-light" id="btn-export-json">
+                    Baixar Arquivo (.json p/ Sistema)
+                  </button>
+                  <button type="button" class="btn btn-light" id="btn-copy-text">
+                    Copiar Relatório em Texto
+                  </button>
+                </div>
               </div>
               <p style="font-size: .84rem; color: var(--tinta-3); margin-top: 8px;">
                 Ao clicar em <strong>"Concluir e Enviar"</strong> ou <strong>"Enviar Dossiê por E-mail"</strong>, seu diagnóstico completo (incluindo o código <code>.json</code> para abertura imediata do caso no sistema da Raízes) é encaminhado para <strong>contato@raizes.agr.br</strong> e para o WhatsApp da equipe.

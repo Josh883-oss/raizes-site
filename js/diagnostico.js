@@ -98,7 +98,7 @@
           '</div>' +
           '<div class="field">' +
             '<label>Data de Nasc. / Idade</label>' +
-            '<input type="text" data-f="idade" value="' + esc(d.idade) + '" placeholder="Ex.: 34 anos">' +
+            '<input type="text" data-f="idade" inputmode="numeric" value="' + esc(d.idade) + '" placeholder="Ex.: 34 anos">' +
           '</div>' +
           '<div class="field">' +
             '<label>Profissão / Formação</label>' +
@@ -209,7 +209,8 @@
           '</div>' +
           '<div class="field">' +
             '<label>Área Total (numérico)</label>' +
-            '<input type="text" data-f="area" value="' + esc(d.area) + '" placeholder="Ex.: 280">' +
+            '<input type="text" data-f="area" inputmode="decimal" value="' + esc(d.area) + '" placeholder="Ex.: 280">' +
+            '<span class="alqueire-hint" data-area-hint></span>' +
           '</div>' +
           '<div class="field">' +
             '<label>Unidade de Área</label>' +
@@ -221,25 +222,25 @@
           '</div>' +
           '<div class="field">' +
             '<label>Ano e Forma de Aquisição</label>' +
-            '<input type="text" data-f="ano_aquisicao" value="' + esc(d.ano_aquisicao) + '" placeholder="Ex.: 1998 (Compra) / 2010 (Herança)">' +
+            '<input type="text" data-f="ano_aquisicao" inputmode="numeric" value="' + esc(d.ano_aquisicao) + '" placeholder="Ex.: 1998 (Compra) / 2010 (Herança)">' +
           '</div>' +
         '</div>' +
         '<div class="field-grid-4">' +
           '<div class="field">' +
             '<label>Valor Estimado de Mercado (R$)</label>' +
-            '<input type="text" data-f="valor_mercado" data-money value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 12.000.000">' +
+            '<input type="text" data-f="valor_mercado" data-money inputmode="decimal" value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 12.000.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Declarado no IRPF (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 950.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 950.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor VTN / ITR ou Venal IPTU (R$)</label>' +
-            '<input type="text" data-f="valor_itr" data-money value="' + esc(d.valor_itr) + '" placeholder="Ex.: 4.800.000">' +
+            '<input type="text" data-f="valor_itr" data-money inputmode="decimal" value="' + esc(d.valor_itr) + '" placeholder="Ex.: 4.800.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Alíquota ITBI Municipal (%)</label>' +
-            '<input type="text" data-f="aliquota_itbi" value="' + esc(d.aliquota_itbi || '2,0%') + '" placeholder="Ex.: 2,0% ou 3,0%">' +
+            '<input type="text" data-f="aliquota_itbi" inputmode="decimal" value="' + esc(d.aliquota_itbi || '2,0%') + '" placeholder="Ex.: 2,0% ou 3,0%">' +
           '</div>' +
         '</div>' +
         '<div class="field-grid-4">' +
@@ -301,7 +302,7 @@
           '</div>' +
           '<div class="field">' +
             '<label>CNPJ (opcional)</label>' +
-            '<input type="text" data-f="cnpj" value="' + esc(d.cnpj) + '" placeholder="00.000.000/0001-00">' +
+            '<input type="text" data-f="cnpj" inputmode="numeric" value="' + esc(d.cnpj) + '" placeholder="00.000.000/0001-00">' +
           '</div>' +
           '<div class="field">' +
             '<label>Atividade / Ramo e Regime Tributário</label>' +
@@ -322,11 +323,11 @@
           '</div>' +
           '<div class="field">' +
             '<label>Valor Estimado de Mercado da Participação (R$)</label>' +
-            '<input type="text" data-f="valor_mercado" data-money value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 1.500.000">' +
+            '<input type="text" data-f="valor_mercado" data-money inputmode="decimal" value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 1.500.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Capital Social / Valor Declarado no IRPF (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 300.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 300.000">' +
           '</div>' +
         '</div>' +
       '</div>'
@@ -358,11 +359,11 @@
           '</div>' +
           '<div class="field">' +
             '<label>Valor Estimado de Mercado (R$)</label>' +
-            '<input type="text" data-f="valor_mercado" data-money value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 1.800.000">' +
+            '<input type="text" data-f="valor_mercado" data-money inputmode="decimal" value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 1.800.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Declarado no IRPF (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 900.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 900.000">' +
           '</div>' +
         '</div>' +
       '</div>'
@@ -390,15 +391,15 @@
           '</div>' +
           '<div class="field">' +
             '<label>Quantidade Aproximada (Cabeças) e Fazenda</label>' +
-            '<input type="text" data-f="quantidade" value="' + esc(d.quantidade) + '" placeholder="Ex.: 650 cabeças Nelore na Faz. Cachoeira">' +
+            '<input type="text" data-f="quantidade" inputmode="numeric" value="' + esc(d.quantidade) + '" placeholder="Ex.: 650 cabeças Nelore na Faz. Cachoeira">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Total de Mercado (R$)</label>' +
-            '<input type="text" data-f="valor_mercado" data-money value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 2.600.000">' +
+            '<input type="text" data-f="valor_mercado" data-money inputmode="decimal" value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 2.600.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Declarado no IRPF / Ficha Rebanho (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 1.100.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 1.100.000">' +
           '</div>' +
         '</div>' +
       '</div>'
@@ -430,11 +431,11 @@
           '</div>' +
           '<div class="field">' +
             '<label>Valor Atual de Mercado (R$)</label>' +
-            '<input type="text" data-f="valor_mercado" data-money value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 850.000">' +
+            '<input type="text" data-f="valor_mercado" data-money inputmode="decimal" value="' + esc(d.valor_mercado) + '" placeholder="Ex.: 850.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Declarado no IRPF (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 850.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 850.000">' +
           '</div>' +
         '</div>' +
       '</div>'
@@ -483,11 +484,11 @@
         '<div class="field-grid-4">' +
           '<div class="field">' +
             '<label>Saldo Devedor Atual (R$)</label>' +
-            '<input type="text" data-f="saldo_devedor" data-money value="' + esc(d.saldo_devedor) + '" placeholder="Ex.: 1.450.000">' +
+            '<input type="text" data-f="saldo_devedor" data-money inputmode="decimal" value="' + esc(d.saldo_devedor) + '" placeholder="Ex.: 1.450.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Valor Declarado no IRPF (R$)</label>' +
-            '<input type="text" data-f="valor_dirpf" data-money value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 1.450.000">' +
+            '<input type="text" data-f="valor_dirpf" data-money inputmode="decimal" value="' + esc(d.valor_dirpf) + '" placeholder="Ex.: 1.450.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Prazo de Quitação / Vencimento Final</label>' +
@@ -532,7 +533,7 @@
           '</div>' +
           '<div class="field">' +
             '<label>Valor Estimado Envolvido (R$)</label>' +
-            '<input type="text" data-f="valor" data-money value="' + esc(d.valor) + '" placeholder="Ex.: 80.000">' +
+            '<input type="text" data-f="valor" data-money inputmode="decimal" value="' + esc(d.valor) + '" placeholder="Ex.: 80.000">' +
           '</div>' +
           '<div class="field">' +
             '<label>Fase Atual / Existe Acordo?</label>' +
@@ -799,6 +800,38 @@
     };
   }
 
+  function updateAlqueireHints() {
+    var container = document.getElementById('lista-imoveis');
+    if (!container) return;
+    container.querySelectorAll('.repeater-item').forEach(function (item) {
+      var areaInp = item.querySelector('[data-f="area"]');
+      var unitSel = item.querySelector('[data-f="unidade_area"]');
+      var hintEl = item.querySelector('[data-area-hint]');
+      if (!hintEl || !areaInp) return;
+
+      var val = parseBRL(areaInp.value);
+      var unit = unitSel ? (unitSel.value || '') : '';
+      if (val > 0) {
+        if (unit.indexOf('alqueire') > -1) {
+          var haMineiro = val * 4.84;
+          var haPaulista = val * 2.42;
+          hintEl.textContent = '≈ ' + haMineiro.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' ha (Alq. Mineiro/GO) ou ' + haPaulista.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' ha (SP)';
+          hintEl.style.display = 'block';
+        } else if (unit.indexOf('ha') > -1) {
+          var alqMin = val / 4.84;
+          hintEl.textContent = '≈ ' + alqMin.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' alqueires mineiros (ou ' + (val * 10000).toLocaleString('pt-BR') + ' m²)';
+          hintEl.style.display = 'block';
+        } else {
+          hintEl.textContent = '';
+          hintEl.style.display = 'none';
+        }
+      } else {
+        hintEl.textContent = '';
+        hintEl.style.display = 'none';
+      }
+    });
+  }
+
   function updateKPIsAndDossie() {
     var state = collectAllData();
     var t = computeTotals(state);
@@ -815,6 +848,7 @@
     setText('kpi-passivos', formatBRL(t.totalPassivos));
     setText('kpi-legado', (f.legado_nota !== '' && f.legado_nota !== undefined ? f.legado_nota : '—') + ' / 10');
 
+    updateAlqueireHints();
     renderDossieHTML(state, t);
   }
 

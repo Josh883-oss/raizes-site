@@ -1801,8 +1801,121 @@ section.no-bottom { padding-bottom: 0; }
   font-weight: 700;
 }
 
+/* Trust Badges no Hero */
+.diag-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+.diag-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 7px 15px;
+  font-size: .84rem;
+  color: var(--areia);
+  backdrop-filter: blur(4px);
+  font-weight: 500;
+}
+.diag-trust-pill svg {
+  flex-shrink: 0;
+  color: var(--terra-300);
+}
+
+/* Cards de Insight / Empatia Tática */
+.diag-insight-box {
+  background: var(--verde-50);
+  border: 1px solid var(--verde-200);
+  border-left: 4px solid var(--terra-600);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin: 16px 0 20px;
+  font-size: .91rem;
+  line-height: 1.5;
+  color: var(--verde-950);
+}
+.diag-insight-box strong {
+  color: var(--verde-900);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: .95rem;
+}
+.diag-insight-box p {
+  margin: 0;
+}
+
+/* Indicador de Conversão Alqueire -> Hectare */
+.alqueire-hint {
+  display: block;
+  font-size: .80rem;
+  font-weight: 600;
+  color: var(--terra-700);
+  margin-top: 4px;
+}
+
+/* Box O Que Acontece Agora (Etapa 6) */
+.next-steps-card {
+  background: var(--areia-clara);
+  border: 1px solid var(--borda-forte);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 22px 0;
+}
+.next-steps-card h3 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  color: var(--verde-900);
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.next-step-item {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  position: relative;
+}
+.next-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--verde-800);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.next-step-item strong {
+  display: block;
+  font-size: .92rem;
+  color: var(--verde-900);
+  margin-bottom: 4px;
+}
+.next-step-item p {
+  font-size: .84rem;
+  color: var(--tinta-3);
+  margin: 0;
+  line-height: 1.4;
+}
+
 @media (max-width: 1024px) {
-  .diag-kpi-grid, .diag-steps-nav {
+  .diag-kpi-grid, .diag-steps-nav, .next-steps-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   .field-grid-4 {
@@ -1813,8 +1926,8 @@ section.no-bottom { padding-bottom: 0; }
   .diag-kpi-bar {
     position: static;
   }
-  .diag-kpi-grid, .diag-steps-nav {
-    grid-template-columns: repeat(2, 1fr);
+  .diag-kpi-grid, .diag-steps-nav, .next-steps-grid {
+    grid-template-columns: 1fr;
   }
   .field-grid-3, .field-grid-4 {
     grid-template-columns: 1fr;
