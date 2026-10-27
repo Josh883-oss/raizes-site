@@ -8,6 +8,9 @@
 
   var STORAGE_KEY = 'raizes_diagnostico_v1';
   var WA_NUMBER = '5532920004387';
+  var SAAS_ENDPOINT = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://127.0.0.1:8000/diagnostico-completo'
+    : 'https://app.raizes.agr.br/diagnostico-completo';
 
   // ==================== UTILITÁRIOS ====================
 
@@ -1584,6 +1587,34 @@
       });
     }
 
+    // Ingestão direta via Webhook no SaaS Raízes (criação automática do Caso)
+    function dispatchWebhookToSaas(state, t) {
+      if (!SAAS_ENDPOINT) return Promise.resolve(null);
+      return fetch(SAAS_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(state)
+      })
+        .then(function (resp) {
+          if (!resp.ok) throw new Error('HTTP ' + resp.status);
+          return resp.json();
+        })
+        .then(function (data) {
+          if (data && data.ok && data.caso_id) {
+            console.info('Caso criado no SaaS Raízes com ID:', data.caso_id);
+          }
+          return data;
+        })
+        .catch(function (err) {
+          // Fallback silencioso — o envio por e-mail e WhatsApp garante a entrega resiliente
+          console.warn('Webhook SaaS indisponível no momento:', err);
+          return null;
+        });
+    }
+
     // Disparo automático por E-mail para contato@raizes.agr.br (com Dossiê + JSON importável no SaaS)
     function dispatchEmailToRaizes(state, t, showStatus) {
       var f = state.fields || {};
@@ -1651,11 +1682,12 @@
         }
         var state = collectAllData();
         var t = computeTotals(state);
+        dispatchWebhookToSaas(state, t);
         dispatchEmailToRaizes(state, t, true);
       });
     }
 
-    // Enviar no WhatsApp + Disparo automático por E-mail em segundo plano
+    // Enviar no WhatsApp + Disparo automático por E-mail e Webhook no SaaS
     function sendToWhatsApp() {
       var consent = document.getElementById('diag_lgpd_consent');
       if (consent && !consent.checked) {
@@ -1664,12 +1696,13 @@
       }
       var state = collectAllData();
       var t = computeTotals(state);
-      // Dispara cópia completa com JSON para o e-mail da Raízes em segundo plano
+      // Ingestão no SaaS e envio de cópia por e-mail em segundo plano
+      dispatchWebhookToSaas(state, t);
       dispatchEmailToRaizes(state, t, false);
       var txt = buildPlainTextSummary(state, t);
       var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(txt);
       window.open(url, '_blank', 'noopener');
-      showFeedback('Diagnóstico encaminhado para contato@raizes.agr.br e abrindo conversa no WhatsApp da Raízes...', false);
+      showFeedback('Diagnóstico integrado ao sistema e abrindo conversa no WhatsApp da Raízes...', false);
     }
 
     var btnWa1 = document.getElementById('btn-send-whatsapp');
