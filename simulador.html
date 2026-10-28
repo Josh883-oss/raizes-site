@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simuladores Tributários e de Sucessão Rural | Raízes</title>
+  <meta name="description" content="Simule o impacto do inventário tradicional e compare a carga tributária anual da safra (Pessoa Física vs Pessoa Jurídica Rural) com base na legislação tributária e rural em vigor.">
+  <link rel="canonical" href="https://raizes.agr.br/simulador.html">
+  <meta name="theme-color" content="#1F3D1A">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://raizes.agr.br/simulador.html">
+  <meta property="og:title" content="Simuladores Tributários e de Sucessão Rural | Raízes">
+  <meta property="og:description" content="Quanto custará o inventário da sua fazenda? Compare o custo do inventário tradicional e a carga de impostos da atividade rural (PF x PJ).">
+  <meta property="og:image" content="https://raizes.agr.br/assets/og-image.png">
+
+  <!-- Favicons Oficiais -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+
+  <!-- Tipografia Nobre & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos Unificados do Projeto -->
+  <link rel="stylesheet" href="css/raizes.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://raizes.agr.br/simulador.html",
+    "url": "https://raizes.agr.br/simulador.html",
+    "name": "Simuladores Tributários e de Sucessão Rural | Raízes",
+    "description": "Calculadoras estratégicas de inventário rural e comparativo de carga tributária da safra (Pessoa Física vs Pessoa Jurídica).",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://raizes.agr.br/#website",
+      "url": "https://raizes.agr.br/",
+      "name": "Raízes Proteção Patrimonial Rural"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://raizes.agr.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Simuladores Tributários",
+          "item": "https://raizes.agr.br/simulador.html"
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para os simuladores</a>
+
+  <!-- ==================== HEADER NOBRE ==================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Raízes Proteção Patrimonial Rural">
+        <picture>
+          <source srcset="assets/simbolo-real-sm.webp" type="image/webp">
+          <img src="assets/simbolo-real-sm.png" alt="Símbolo Árvore Raízes" width="103" height="120">
+        </picture>
+        <span>RAÍZES<small>PROTEÇÃO PATRIMONIAL RURAL</small></span>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links" id="menu-links">
+          <li><a href="index.html#solucoes">Soluções</a></li>
+          <li><a href="index.html#riscos">O Que Está em Jogo</a></li>
+          <li><a href="simulador.html" aria-current="page" style="color: var(--verde-800); font-weight: 700;">Simuladores</a></li>
+          <li><a href="diagnostico.html">Diagnóstico Completo</a></li>
+          <li><a href="index.html#metodologia">Como Funciona</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-wa" href="https://wa.me/5532920004387?text=Ol%C3%A1!%20Gostaria%20de%20uma%20conversa%20confidencial%20sobre%20a%20prote%C3%A7%C3%A3o%20patrimonial%20e%20sucess%C3%A3o%20da%20minha%20fam%C3%ADlia." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+          Agendar Conversa em Sigilo
+        </a>
+        <button class="menu-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="menu-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ==================== HERO DOS SIMULADORES ==================== -->
+    <section class="sim-page-hero">
+      <div class="container">
+        <div class="eyebrow eyebrow-light">Inteligência Tributária & Sucessória no Campo</div>
+        <h1>Dimensione o Impacto Tributário e Sucessório da Sua Propriedade</h1>
+        <p class="lead">
+          Duas calculadoras interativas e fundamentadas na legislação brasileira em vigor. Estime o rombo financeiro de um inventário tradicional com o novo ITCMD progressivo ou compare a carga tributária da sua safra entre Pessoa Física e Jurídica Rural.
+        </p>
+
+        <!-- Abas de Seleção Rápida -->
+        <div class="sim-tabs-nav" role="tablist" aria-label="Escolha a simulação">
+          <button type="button" class="sim-tab-btn active" role="tab" id="tab-btn-inv" data-tab="inventario" aria-selected="true" aria-controls="panel-inventario">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 2L2 7h20L12 2z"/></svg>
+            1. Custo de Inventário & Sucessão (ITCMD)
+          </button>
+          <button type="button" class="sim-tab-btn" role="tab" id="tab-btn-trib" data-tab="tributario" aria-selected="false" aria-controls="panel-tributario">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 18V6"/></svg>
+            2. Eficiência Tributária da Safra (PF × PJ)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO PRINCIPAL DOS SIMULADORES ==================== -->
+    <section class="simulador-section" style="padding: 60px 0;">
+      <div class="container">
+
+        <!-- ==================== ABA 1: SIMULADOR DE INVENTÁRIO RURAL ==================== -->
+        <div class="sim-panel active" id="panel-inventario" role="tabpanel" aria-labelledby="tab-btn-inv">
+          <div class="section-head" style="margin-bottom: 32px;">
+            <div class="eyebrow">Calculadora 01 • Transmissão Patrimonial</div>
+            <h2>Quanto custará o inventário tradicional das suas terras?</h2>
+            <p>
+              Sem planejamento, o inventário judicial impõe o pagamento imediato do ITCMD sobre o valor venal de mercado das fazendas, além de custas e honorários. Ajuste o patrimônio e veja a estimativa baseada nas alíquotas do seu Estado.
+            </p>
+          </div>
+
+          <div class="simulador-box">
+            <!-- Controles do Inventário -->
+            <div class="simulador-intro">
+              <h3>Parâmetros da Propriedade</h3>
+              <p>
+                Selecione o Estado onde estão situadas as matrículas e defina o valor total estimado (terras, sedes, cafezais, rebanho e maquinários).
+              </p>
+
+              <div class="sim-form-group">
+                <label for="page-sim-uf">Estado da Propriedade (UF para apuração do ITCMD):</label>
+                <select id="page-sim-uf" class="sim-select" aria-label="Selecione o Estado">
+                  <option value="MG" selected>Minas Gerais (MG) — Alíquota média 5% a 8%</option>
+                  <option value="SP">São Paulo (SP) — 4% (progressão em análise)</option>
+                  <option value="GO">Goiás (GO) — 4% a 8%</option>
+                  <option value="MT">Mato Grosso (MT) — 2% a 8%</option>
+                  <option value="MS">Mato Grosso do Sul (MS) — 3% a 8%</option>
+                  <option value="PR">Paraná (PR) — 4%</option>
+                  <option value="RS">Rio Grande do Sul (RS) — 4% a 6%</option>
+                  <option value="BA">Bahia (BA) — 3.5% a 8%</option>
+                  <option value="TO">Tocantins (TO) — 2% a 8%</option>
+                  <option value="PA">Pará (PA) — 4%</option>
+                  <option value="MA">Maranhão (MA) — 3% a 7%</option>
+                  <option value="OUTRO">Outro Estado (Média Nacional 5%)</option>
+                </select>
+              </div>
+
+              <div class="sim-form-group">
+                <label for="page-sim-patrimonio">Valor Estimado do Patrimônio Rural Total:</label>
+                <input type="range" id="page-sim-patrimonio" class="sim-range" min="1000000" max="60000000" step="1000000" value="12000000" aria-label="Valor estimado do patrimônio rural">
+                <div class="range-display">
+                  <span>R$ 1 Milhão</span>
+                  <span class="range-val" id="page-display-patrimonio">R$ 12.000.000</span>
+                  <span>R$ 60 Milhões+</span>
+                </div>
+
+                <!-- Presets Rápidos -->
+                <div class="sim-presets-bar">
+                  <span>Atalhos:</span>
+                  <button type="button" class="sim-preset-btn btn-preset-patr" data-val="3000000">R$ 3M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-patr" data-val="5000000">R$ 5M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-patr" data-val="12000000">R$ 12M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-patr" data-val="25000000">R$ 25M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-patr" data-val="50000000">R$ 50M</button>
+                </div>
+              </div>
+
+              <p class="muted" style="font-size: .88rem; margin-top: 18px; line-height: 1.5;">
+                * <strong>Impacto da Reforma Tributária (EC 132/2023):</strong> O ITCMD tornou-se compulsoriamente progressivo em todos os Estados brasileiros (com teto de até 8%), onerando significativamente as heranças de grande valor fundiário transferidas por inventário tradicional.
+              </p>
+            </div>
+
+            <!-- Resultado Dinâmico do Inventário -->
+            <div class="sim-result-card" aria-live="polite">
+              <div class="sim-result-header">
+                <small>Impacto Financeiro no Inventário Tradicional</small>
+                <strong id="page-res-patrimonio">R$ 12.000.000</strong>
+              </div>
+
+              <div class="sim-metric-row">
+                <span>Imposto ITCMD Causa Mortis:</span>
+                <strong id="page-res-itcmd">R$ 600.000</strong>
+              </div>
+              <div class="sim-metric-row">
+                <span>Custas Cartorárias & Honorários (~10%):</span>
+                <strong id="page-res-custas">R$ 1.200.000</strong>
+              </div>
+              <div class="sim-metric-row destaque">
+                <span>Perda Estimada no Inventário:</span>
+                <strong id="page-res-perda-total">~ R$ 1.800.000</strong>
+              </div>
+              <div class="sim-metric-row" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 14px; margin-top: 6px;">
+                <span style="color: #A9CC7A;">Economia Estimada com Holding & Doação:</span>
+                <strong id="page-res-economia" style="color: #A9CC7A;">~ R$ 1.320.000</strong>
+              </div>
+
+              <p class="sim-notice">
+                Valores ilustrativos de ordem de grandeza baseados na legislação em vigor. Custos reais variam conforme comarca, meação matrimonial e composição de ativos.
+              </p>
+
+              <a class="btn btn-wa" id="page-btn-wa-inv" href="https://wa.me/5532920004387" target="_blank" rel="noopener" style="width: 100%; margin-bottom: 10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+                Receber Simulação de Inventário no WhatsApp
+              </a>
+              <a class="btn btn-terra" href="diagnostico.html" style="width: 100%;">
+                Iniciar Diagnóstico Patrimonial Completo (3 min) →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== ABA 2: SIMULADOR TRIBUTÁRIO DA SAFRA ==================== -->
+        <div class="sim-panel" id="panel-tributario" role="tabpanel" aria-labelledby="tab-btn-trib">
+          <div class="section-head" style="margin-bottom: 32px;">
+            <div class="eyebrow">Calculadora 02 • Eficiência Tributária da Safra</div>
+            <h2>Pessoa Física ou Jurídica Rural: qual a carga real na sua produção?</h2>
+            <p>
+              Muitos cafeicultores e produtores rurais comercializam a safra inteiramente na Pessoa Física por hábito, recolhendo IRPF (até 27,5%) e Funrural (1,5%). Veja o comparativo financeiro direto com uma estrutura societária rural no Lucro Presumido.
+            </p>
+          </div>
+
+          <div class="simulador-box">
+            <!-- Controles Tributários -->
+            <div class="simulador-intro">
+              <h3>Parâmetros da Produção Agropecuária</h3>
+              <p>
+                Informe o faturamento bruto anual aproximado obtido com café, grãos, gado de corte ou leite, e selecione a forma de apuração adotada na Pessoa Física.
+              </p>
+
+              <div class="sim-form-group">
+                <label for="page-sim-receita">Receita Bruta Anual da Atividade Rural:</label>
+                <input type="range" id="page-sim-receita" class="sim-range" min="1000000" max="30000000" step="500000" value="5000000" aria-label="Receita bruta anual da atividade rural">
+                <div class="range-display">
+                  <span>R$ 1 Milhão</span>
+                  <span class="range-val" id="page-display-receita">R$ 5.000.000</span>
+                  <span>R$ 30 Milhões+</span>
+                </div>
+
+                <!-- Presets Rápidos Receita -->
+                <div class="sim-presets-bar">
+                  <span>Atalhos:</span>
+                  <button type="button" class="sim-preset-btn btn-preset-receita" data-val="2000000">R$ 2M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-receita" data-val="5000000">R$ 5M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-receita" data-val="10000000">R$ 10M</button>
+                  <button type="button" class="sim-preset-btn btn-preset-receita" data-val="20000000">R$ 20M</button>
+                </div>
+              </div>
+
+              <div class="sim-form-group" style="margin-top: 20px;">
+                <label for="page-sim-regime-pf">Regime de Apuração do IRPF na Pessoa Física:</label>
+                <select id="page-sim-regime-pf" class="sim-select" aria-label="Regime de apuração do IRPF">
+                  <option value="arbitrado" selected>Arbitramento Legal — 20% da Receita (Art. 4º da Lei 8.023/90)</option>
+                  <option value="livro_caixa_alto">Livro Caixa com Alta Margem — Margem Real ~35%</option>
+                </select>
+                <span id="page-display-regime-desc" class="muted" style="display:block; font-size:.82rem; margin-top:6px;">
+                  Arbitramento Legal (20% da Receita Bruta — Art. 4º Lei 8.023/90)
+                </span>
+              </div>
+
+              <p class="muted" style="font-size: .88rem; margin-top: 18px; line-height: 1.5;">
+                * <strong>Planejamento Lícito da Safra:</strong> A exploração através de uma Pessoa Jurídica Rural ou holding operacional permite segregar o risco do plantio da titularidade das terras, além de otimizar a tributação de arrendamentos, parcerias e compra de insumos.
+              </p>
+            </div>
+
+            <!-- Resultado Dinâmico Tributário (PF x PJ) -->
+            <div class="sim-result-card" aria-live="polite">
+              <div class="sim-result-header" style="margin-bottom: 16px;">
+                <small>Comparativo Anual de Impostos da Atividade</small>
+                <span>Carga Tributária Anual Estimada</span>
+              </div>
+
+              <!-- Lado a Lado PF x PJ -->
+              <div class="sim-dual-cards">
+                <!-- Caixa Pessoa Física -->
+                <div class="sim-col-box pf">
+                  <h4>
+                    <span>Pessoa Física</span>
+                    <span class="badge-regime pf">IRPF + Funrural</span>
+                  </h4>
+                  <div class="sim-tax-subrow">
+                    <span>Base Tributável:</span>
+                    <strong id="page-pf-base">R$ 1.000.000</strong>
+                  </div>
+                  <div class="sim-tax-subrow">
+                    <span>IRPF (tabela 27,5%):</span>
+                    <span id="page-pf-irpf">R$ 275.000</span>
+                  </div>
+                  <div class="sim-tax-subrow">
+                    <span>Funrural PF (1,5%):</span>
+                    <span id="page-pf-funrural">R$ 75.000</span>
+                  </div>
+                  <div class="sim-tax-subrow total">
+                    <span>Total PF Anual:</span>
+                    <span style="color:#FCA5A5;" id="page-pf-total">R$ 350.000</span>
+                  </div>
+                  <div style="font-size:0.75rem; color:#FCA5A5; text-align:right; margin-top:2px;" id="page-pf-aliquota">
+                    (7,0% efetivo)
+                  </div>
+                </div>
+
+                <!-- Caixa Pessoa Jurídica -->
+                <div class="sim-col-box pj">
+                  <h4>
+                    <span>Pessoa Jurídica Rural</span>
+                    <span class="badge-regime pj">Lucro Presumido</span>
+                  </h4>
+                  <div class="sim-tax-subrow">
+                    <span>IRPJ (8% presunção):</span>
+                    <span id="page-pj-irpj">R$ 76.000</span>
+                  </div>
+                  <div class="sim-tax-subrow">
+                    <span>CSLL (12% presunção):</span>
+                    <span id="page-pj-csll">R$ 54.000</span>
+                  </div>
+                  <div class="sim-tax-subrow">
+                    <span>PIS/COFINS Agro:</span>
+                    <span id="page-pj-piscofins">R$ 75.000</span>
+                  </div>
+                  <div class="sim-tax-subrow">
+                    <span>Funrural PJ (1,5%):</span>
+                    <span id="page-pj-funrural">R$ 75.000</span>
+                  </div>
+                  <div class="sim-tax-subrow total">
+                    <span>Total PJ Anual:</span>
+                    <span style="color:#6EE7B7;" id="page-pj-total">R$ 280.000</span>
+                  </div>
+                  <div style="font-size:0.75rem; color:#6EE7B7; text-align:right; margin-top:2px;" id="page-pj-aliquota">
+                    (5,6% efetivo)
+                  </div>
+                </div>
+              </div>
+
+              <!-- Banner de Economia da Safra -->
+              <div class="sim-banner-economia-safra">
+                <div>
+                  <div class="txt"><strong>Economia Anual de Caixa Projetada na Safra:</strong></div>
+                  <small style="color:#D4CDBC; font-size:0.78rem;" id="page-safra-economia-pct">Economia de aprox. 20% da carga tributária anual.</small>
+                </div>
+                <div class="val" id="page-safra-economia-val">~ R$ 70.000 / ano</div>
+              </div>
+
+              <p class="sim-notice">
+                Cálculos referenciais fundamentados na Lei 8.023/90 e Lei 9.249/95. Em safras com alta margem ou com despesas dedutíveis atípicas no Livro Caixa, a economia pode ser ainda mais expressiva.
+              </p>
+
+              <a class="btn btn-wa" id="page-btn-wa-trib" href="https://wa.me/5532920004387" target="_blank" rel="noopener" style="width: 100%; margin-bottom: 10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+                Conversar sobre Tributação da Safra no WhatsApp
+              </a>
+              <a class="btn btn-terra" href="diagnostico.html" style="width: 100%;">
+                Preencher Diagnóstico Rural Completo →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CARD PONTE: DO SIMULADOR AO DIAGNÓSTICO COMPLETO ==================== -->
+        <div class="simulador-bridge-card">
+          <div>
+            <h4>Deseja aprofundar e gerar o Dossiê Executivo da sua fazenda?</h4>
+            <p>
+              Preencha o Diagnóstico Patrimonial e Sucessório Completo (leva apenas ~3 a 4 minutos). Você mapeia herdeiros, terras e passivos rurais, salva tudo em sigilo no seu próprio aparelho e gera imediatamente o Dossiê Executivo para orientar a reunião familiar.
+            </p>
+          </div>
+          <a class="btn-bridge" href="diagnostico.html">
+            Iniciar Diagnóstico da Família →
+          </a>
+        </div>
+
+        <!-- ==================== AVISO LEGAL & COMPLIANCE (CDC / CONAR) ==================== -->
+        <div class="card" style="margin-top: 32px; background: #FAF7F0; border-left: 5px solid var(--terra-600); border-radius: var(--radius-md); padding: 22px;">
+          <p style="font-size: .9rem; color: var(--tinta-2); margin: 0; line-height: 1.6;">
+            <strong>Transparência e Conformidade Regulatória (CDC art. 37 & NBC PG 01):</strong> Os valores apurados nestas ferramentas representam <strong>estimativas de ordem de grandeza</strong> fundamentadas na legislação federal e estadual vigente (art. 23 da Lei 9.249/95, art. 156, §2º, I da Constituição Federal, Lei 8.023/90 e Emenda Constitucional 132/2023). Alíquotas reais, bases de cálculo e incentivos fiscais específicos variam por comarca, regime de bens e composição de custos do produtor rural. Nenhuma economia absoluta é prometida: a estruturação personalizada é confirmada no diagnóstico com os profissionais habilitados.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO CTA FINAL ==================== -->
+    <section class="tight" style="padding: 60px 0; background: var(--verde-950); color: #fff;">
+      <div class="container" style="text-align: center;">
+        <h2 style="color: #fff; font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-bottom: 14px;">
+          Quer avaliar o cenário real da sua família rural?
+        </h2>
+        <p style="color: var(--areia); max-width: 62ch; margin: 0 auto 28px auto; font-size: 1.05rem; line-height: 1.6;">
+          Agende uma conversa preliminar de diagnóstico com a equipe técnica da Raízes. Análise estritamente sigilosa, sem exposição de patrimônio e sem compromisso.
+        </p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="btn btn-terra btn-lg" href="diagnostico.html">
+            Preencher Diagnóstico Gratuito (3 min) →
+          </a>
+          <a class="btn btn-wa btn-lg" href="https://wa.me/5532920004387?text=Ol%C3%A1!%20Fiz%20a%20simula%C3%A7%C3%A3o%20na%20p%C3%A1gina%20de%20simuladores%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o%20para%20o%20meu%20caso." target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+            Conversar no WhatsApp em Sigilo
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ INSTITUCIONAL ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand">
+            <picture>
+              <source srcset="assets/simbolo-real-sm.webp" type="image/webp">
+              <img src="assets/simbolo-real-sm.png" alt="Símbolo Árvore Raízes" width="103" height="120">
+            </picture>
+            <span>RAÍZES<small>PROTEÇÃO PATRIMONIAL RURAL</small></span>
+          </div>
+          <p class="tagline">Quem planta hoje, protege o amanhã.</p>
+          <p style="margin-top: 14px; font-size: .84rem; line-height: 1.5; color: #8E9E7F;">
+            Assessoria especializada em governança, proteção patrimonial e perícia de imóveis rurais em Minas Gerais e no Brasil.
+          </p>
+        </div>
+
+        <div>
+          <h3>Soluções</h3>
+          <a href="index.html#solucoes">Holding Rural & Familiar</a>
+          <a href="index.html#solucoes">Planejamento Sucessório</a>
+          <a href="index.html#solucoes">Eficiência Tributária Agrícola</a>
+          <a href="index.html#solucoes">Avaliação Pericial PTAM</a>
+          <a href="diagnostico.html">Diagnóstico Patrimonial Completo</a>
+          <a href="simulador.html">Simuladores Estratégicos</a>
+        </div>
+
+        <div>
+          <h3>Institucional</h3>
+          <a href="index.html#metodologia">Como Funciona</a>
+          <a href="index.html#autoridade">Corpo de Especialistas</a>
+          <a href="index.html#faq">Dúvidas Frequentes</a>
+          <a href="privacidade.html">Política de Privacidade (LGPD)</a>
+        </div>
+
+        <div>
+          <h3>Contato Direto</h3>
+          <a href="https://wa.me/5532920004387" target="_blank" rel="noopener">WhatsApp: (32) 92000-4387</a>
+          <a href="mailto:contato@raizes.agr.br">contato@raizes.agr.br</a>
+          <span style="display: block; margin-top: 12px; font-size: .82rem; color: #7F8E71;">Atendimento sob estrita confidencialidade.</span>
+        </div>
+      </div>
+
+      <div class="legal">
+        <span>© <span id="ano">2026</span> Raízes Proteção Patrimonial Rural. Marca Registrada no INPI.</span>
+        <span>Atendimento com sigilo, ética e visão de longo prazo.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOTÃO FLUTUANTE DE WHATSAPP ==================== -->
+  <a class="wa-float" href="https://wa.me/5532920004387?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20prote%C3%A7%C3%A3o%20patrimonial%20e%20sucess%C3%A3o%20da%20minha%20fam%C3%ADlia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Especialista da Raízes">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5M12 2.5A11.5 11.5 0 0 0 2 19.8L.5 23.5l3.8-1A11.5 11.5 0 1 0 12 2.5"/></svg>
+  </a>
+
+  <!-- ==================== BARRA FIXA MOBILE PARA CONVERSÃO ==================== -->
+  <div class="mobile-sticky-bar">
+    <a class="btn btn-wa" href="https://wa.me/5532920004387?text=Ol%C3%A1!%20Gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20os%20simuladores%20de%20prote%C3%A7%C3%A3o%20patrimonial%20rural." target="_blank" rel="noopener">
+      Falar no WhatsApp
+    </a>
+    <a class="btn btn-light" href="diagnostico.html">
+      Fazer Diagnóstico
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/simulador.js"></script>
+</body>
+</html>

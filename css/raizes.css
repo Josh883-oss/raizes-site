@@ -2105,6 +2105,197 @@ section.no-bottom { padding-bottom: 0; }
   }
 }
 
+/* ============================================================
+   PÁGINA DEDICADA DE SIMULADORES (simulador.html)
+   Abas, Presets Rápidos e Comparativo Tributário PF x PJ
+   ============================================================ */
+.sim-page-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(168, 124, 42, 0.15), transparent 40%),
+              linear-gradient(180deg, var(--verde-950) 0%, var(--verde-900) 100%);
+  color: #fff;
+  padding: 80px 0 60px 0;
+  text-align: center;
+}
+.sim-page-hero h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  margin: 16px auto 20px auto;
+  max-width: 24ch;
+}
+.sim-page-hero .lead {
+  color: var(--areia);
+  max-width: 68ch;
+  margin: 0 auto 36px auto;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Abas de Alternância dos Simuladores */
+.sim-tabs-nav {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.sim-tab-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--pill);
+  padding: 13px 26px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.sim-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--terra-400);
+  transform: translateY(-2px);
+}
+.sim-tab-btn.active {
+  background: var(--terra-600);
+  border-color: var(--terra-500);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(168, 124, 42, 0.4);
+}
+
+.sim-panel {
+  display: none;
+}
+.sim-panel.active {
+  display: block;
+  animation: simFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes simFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Presets Rápidos de Valores (Chips) */
+.sim-presets-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.sim-presets-bar span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tinta-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.sim-preset-btn {
+  background: var(--areia-clara);
+  border: 1px solid var(--borda);
+  border-radius: var(--pill);
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--verde-900);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.sim-preset-btn:hover {
+  background: var(--verde-800);
+  color: #fff;
+  border-color: var(--verde-800);
+}
+
+/* Comparativo Tributário Lado a Lado (PF x PJ) */
+.sim-dual-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.sim-col-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+}
+.sim-col-box.pf {
+  border-top: 4px solid #F87171;
+}
+.sim-col-box.pj {
+  border-top: 4px solid #34D399;
+}
+.sim-col-box h4 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sim-col-box .badge-regime {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--pill);
+  text-transform: uppercase;
+}
+.badge-regime.pf { background: rgba(248, 113, 113, 0.2); color: #FCA5A5; }
+.badge-regime.pj { background: rgba(52, 211, 153, 0.2); color: #6EE7B7; }
+
+.sim-tax-subrow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #D4CDBC;
+  padding: 5px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.sim-tax-subrow.total {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: none;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 10px;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.sim-banner-economia-safra {
+  background: linear-gradient(135deg, rgba(27, 59, 34, 0.95) 0%, rgba(42, 90, 52, 0.95) 100%);
+  border: 1.5px solid #34D399;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.sim-banner-economia-safra .txt {
+  font-size: 0.88rem;
+  color: #E2F5E9;
+}
+.sim-banner-economia-safra .val {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #A9CC7A;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .sim-dual-cards {
+    grid-template-columns: 1fr;
+  }
+  .sim-banner-economia-safra {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media print {
   .site-header, .diag-toolbar, .diag-kpi-bar, .diag-steps-nav,
   .diag-step-footer, .wa-float, .mobile-sticky-bar, .no-print,
